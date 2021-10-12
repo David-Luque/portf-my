@@ -1,8 +1,14 @@
 import * as React from 'react';
 
-const Header = ()=>{
+const Header = () => {
     return (
-        <h2>Header</h2>
+        <header>
+            <h3>David Luque</h3>
+            <p>________________</p>
+            <p>Full stack web developer</p>
+            {/* <img/> */}
+        </header>
+        
     );
 };
 
