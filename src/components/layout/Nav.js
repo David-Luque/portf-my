@@ -1,10 +1,35 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+
+const NavBar = styled.nav`
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: royalblue;
+    text-align: end
+`
+
+const NavLinks = styled.ul`
+
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+`
+
 
 const Nav = ()=>{
     return (
-        <nav>
-            <ul>
+        <NavBar>
+            <NavLinks>
                 <Link to={'/about'}>
                     <li>About me</li>
                 </Link>
@@ -17,8 +42,8 @@ const Nav = ()=>{
                 <Link to={'/contact'}>
                     <li>Contact</li>
                 </Link>
-            </ul>
-        </nav>
+            </NavLinks>
+        </NavBar>
     );
 };
 
