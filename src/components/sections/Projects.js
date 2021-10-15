@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import ProjectCard from '../layout/ProjectCard';
+import projectsData from '../../projectsData';
 
 const ProjectStyled = styled.section`
     width: 100%;
@@ -25,15 +27,21 @@ const ProjectStyled = styled.section`
     align-items: stretch;
 `;
 
+const renderProjects = ()=>{
+    return projectsData.map((project, index) => (
+        <ProjectCard
+            key={index}
+            projectInfo={project}
+        />
+    ))
+};
+
 const Projects = () => {
     return (
-        <ProjectStyled>
+        <ProjectStyled id="projects">
             <h2>My projects</h2>
             <ul>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
-                <li>Four</li>
+                {renderProjects()}
             </ul>
         </ProjectStyled>
     );

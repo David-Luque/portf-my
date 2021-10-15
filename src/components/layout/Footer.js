@@ -14,12 +14,39 @@ const FooterStyled = styled.footer`
         padding: 2.5rem;
         margin: 0;
     }
+
+    .contact-info p {
+        margin: .5rem;
+        text-align: left;
+    }
+
+    .social-media {
+        p {
+            margin: .5rem;
+        }
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 `;
 
 const Footer = () => {
     return (
         <FooterStyled>
             <h4>Develop by David - All rights reserved </h4>
+            <div className="contact-info">
+                <p>email</p>
+                <div className="social-media">
+                    <p>linkedIn icon</p>
+                    <p>gitHub icon</p>
+                </div>
+                    
+            </div>
         </FooterStyled>
     );
 }

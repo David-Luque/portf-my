@@ -30,16 +30,16 @@ const Nav = ()=>{
     return (
         <NavBar>
             <NavLinks>
-                <Link to={'/about'}>
+                <Link to={'#about'}>
                     <li>About me</li>
                 </Link>
-                <Link to={'/technologies'}>
+                <Link to={'#technologies'}>
                     <li>Technologies</li>
                 </Link>
-                <Link to={'/projects'}>
+                <Link to={'#projects'}>
                     <li>Projects</li>
                 </Link>
-                <Link to={'/contact'}>
+                <Link to={'#contact'}>
                     <li>Contact</li>
                 </Link>
             </NavLinks>

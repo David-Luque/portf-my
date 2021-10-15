@@ -37,14 +37,9 @@ const InfoContainer = styled.div`
 
 const Contact = () => {
     return (
-        <ContactStyled>
+        <ContactStyled id="contact">
             <h2>Contact</h2>
             <InfoContainer>
-                <div className="contact-info">
-                    <p>gitHub</p>
-                    <p>email</p>
-                    <p>linked-In</p>
-                </div>
                 <form className="contact-form">
                     <input
                         type="text"

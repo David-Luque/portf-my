@@ -18,7 +18,7 @@ const TechnologiesStyled = styled.section`
         }
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 3px;
     }
 
@@ -30,15 +30,34 @@ const TechnologiesStyled = styled.section`
 
 const Technologies = () => {
     return (
-        <TechnologiesStyled>
+        <TechnologiesStyled id="technologies">
             <h2>Technologies</h2>
             <ul className="container">
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
-                <li>Four</li>
-                <li>Five</li>
-                <li>Six</li>
+                <h3>Basics</h3>
+                <li>HTML / CSS / Javascript</li>
+
+                <h3>Styling</h3>
+                <li>SASS / SCSS & styled components</li>
+                
+                <h3>Client frameworks</h3>
+                <li>React & Redux </li>
+                <li>Next.js & Gatsby</li>
+                
+                <h3>Server frameworks and databases</h3>
+                <li>Node.js & Express.js</li>
+                <li>MongoDB & MySQL</li>
+
+                <h3>API?</h3>
+                <li>REST APIs & GraphQL</li>
+
+                <h3>Testing</h3>
+                <li>Jest, Cypress, React-testing-library</li>
+                
+                <h3>Version control</h3>
+                <li>Git & GitHub</li>
+                
+                <h3>Content management system</h3>
+                <li>Firebase, DatoCMS, Strapi</li>
             </ul>
         </TechnologiesStyled>
     );
