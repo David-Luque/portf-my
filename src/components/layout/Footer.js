@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import gitHubIcon from '../../images/github-icon.jpeg';
+import linkedInIcon from '../../images/LinkedIn_icon.jpg';
 
 const FooterStyled = styled.footer`
     box-sizing: border-box;
@@ -25,6 +27,15 @@ const FooterStyled = styled.footer`
             margin: .5rem;
         }
 
+        a {
+            margin: .5rem;
+
+            img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        }
+
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -40,10 +51,14 @@ const Footer = () => {
         <FooterStyled>
             <h4>Develop by David - All rights reserved </h4>
             <div className="contact-info">
-                <p>email</p>
+                <p>dvdlq99@gmail.com</p>
                 <div className="social-media">
-                    <p>linkedIn icon</p>
-                    <p>gitHub icon</p>
+                    <a href="https://www.linkedin.com/in/david-luque-alba/" target="_blank">
+                        <img src={linkedInIcon} alt="linkedIn icon"/>
+                    </a>
+                    <a href="https://github.com/David-Luque" target="_blank">
+                        <img src={gitHubIcon} alt="GitHub icon"/>
+                    </a>
                 </div>
                     
             </div>

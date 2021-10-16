@@ -8,20 +8,20 @@ const NavBar = styled.nav`
     height: auto;
     padding: 1rem;
     background-color: royalblue;
-    text-align: end
+    text-align: right;
 `
 
 const NavLinks = styled.ul`
-
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 
     a {
         text-decoration: none;
         color: whitesmoke;
+        margin-right: 2rem;
     }
 `
 

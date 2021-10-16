@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import ProjectCard from '../layout/ProjectCard';
+import ProjectCard from '../UI/ProjectCard';
 import projectsData from '../../projectsData';
 
 const ProjectStyled = styled.section`

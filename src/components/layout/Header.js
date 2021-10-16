@@ -1,10 +1,18 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import bgImage from '../../images/bg-hero.jpg';
 
 const HeaderStyled = styled.header`
     width: 100%;
     height: 30rem;
-    background-color: grey;
+    color: whitesmoke;
+    background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url(${bgImage});
+    background-size: cover;
 
     .container {
         padding-top: 7rem;
@@ -13,7 +21,7 @@ const HeaderStyled = styled.header`
         .line {
             width: 25%;
             height: 2px;
-            background-color: black;
+            background-color: whitesmoke;
             margin: -1rem;
         }
 
@@ -26,13 +34,13 @@ const HeaderStyled = styled.header`
 `;
 
 const Header = () => {
+    console.log(bgImage)
     return (
         <HeaderStyled>
             <div className="container">
                 <h3>David Luque</h3>
                 <div className="line"></div>
                 <h4>Full stack web developer</h4>
-                <img src="" alt="" />
             </div>
         </HeaderStyled>
         

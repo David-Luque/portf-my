@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Button from './Button';
 
 const ProjectCard = ({ projectInfo })=>{
 
@@ -9,8 +10,14 @@ const ProjectCard = ({ projectInfo })=>{
             <h5>{name}</h5>
             <p>{description}</p>
             <img src={project_image} alt={`${name} preview`}/>
-            <a href={publicURL}>preview url</a>
-            <a href={gitHub_link}>github repo</a>
+            <Button
+                link={publicURL}
+                text="Preview"
+            />
+            <Button
+                link={gitHub_link}
+                text="GitHub Repo"
+            />
         </li>
     )
 };
