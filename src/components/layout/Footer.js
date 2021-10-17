@@ -47,9 +47,12 @@ const FooterStyled = styled.footer`
 `;
 
 const Footer = () => {
+
+    const year = new Date().getFullYear();
+
     return (
         <FooterStyled>
-            <h4>Develop by David - All rights reserved </h4>
+            <h4>Develop by David - All rights reserved &copy; - {year} </h4>
             <div className="contact-info">
                 <p>dvdlq99@gmail.com</p>
                 <div className="social-media">
