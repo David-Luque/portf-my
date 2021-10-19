@@ -30,7 +30,7 @@ const TechnologiesStyled = styled.section`
 
 const Technologies = () => {
     return (
-        <TechnologiesStyled id="technologies">
+        <TechnologiesStyled id="technologies" className="section-technologies">
             <h2>Technologies</h2>
             <ul className="container">
                 <li>

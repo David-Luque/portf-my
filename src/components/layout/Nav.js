@@ -1,49 +1,25 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-
-const NavBar = styled.nav`
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    background-color: royalblue;
-    text-align: right;
-`
-
-const NavLinks = styled.ul`
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-
-    a {
-        text-decoration: none;
-        color: whitesmoke;
-        margin-right: 2rem;
-    }
-`
 
 
 const Nav = ()=>{
     return (
-        <NavBar>
-            <NavLinks>
-                <Link to={'#about'}>
+        <nav className="navigation">
+            <ul className="navigation__list">
+                <Link to={'#about'} className="navigation__link">
                     <li>About me</li>
                 </Link>
-                <Link to={'#technologies'}>
+                <Link to={'#technologies'} className="navigation__link">
                     <li>Technologies</li>
                 </Link>
-                <Link to={'#projects'}>
+                <Link to={'#projects'} className="navigation__link">
                     <li>Projects</li>
                 </Link>
-                <Link to={'#contact'}>
+                <Link to={'#contact'} className="navigation__link">
                     <li>Contact</li>
                 </Link>
-            </NavLinks>
-        </NavBar>
+            </ul>
+        </nav>
     );
 };
 

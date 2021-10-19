@@ -1,0 +1,31 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: .5rem;
+    background-color: royalblue;
+    text-align: right;
+
+    &__list {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__link {
+        
+        &:link,
+        &:link:visited {
+            text-decoration: none;
+            color: whitesmoke;
+            margin-right: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        
+    }
+}

@@ -35,7 +35,7 @@ const AboutStyled = styled.section`
 
 const About = () => {
     return (
-        <AboutStyled id="about">
+        <AboutStyled id="about" className="section-about">
             <div className="content">
                 <h2>About me</h2>
                 <div className="description-text">

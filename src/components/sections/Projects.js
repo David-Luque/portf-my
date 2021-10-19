@@ -38,7 +38,7 @@ const renderProjects = ()=>{
 
 const Projects = () => {
     return (
-        <ProjectStyled id="projects">
+        <ProjectStyled id="projects" className="section-projects">
             <h2>My projects</h2>
             <ul>
                 {renderProjects()}

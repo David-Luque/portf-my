@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+::selection {
+  background-color: #F87060;
+  color: black; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #696969; }
+
+.heading-primary {
+  color: #F5F5F5;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        letter-spacing: 1.5rem; } }
+  .heading-primary--sub {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    margin-top: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 1rem; } }
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #102542;
+  letter-spacing: .3rem; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(16, 37, 66, 0.7), rgba(16, 37, 66, 0.9)), url("../images/bg-hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: .5rem;
+  background-color: royalblue;
+  text-align: right; }
+  .navigation__list {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none; }
+  .navigation__link:link, .navigation__link:link:visited {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 2rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+
+.footer {
+  background-color: #36454F;
+  padding: 5rem 0;
+  font-size: 1.2rem;
+  color: #696969; }
+  .footer:not(:last-child) {
+    margin-bottom: 2rem; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 5rem;
+    height: auto; }
+  .footer__contact-info {
+    padding: 4rem 0;
+    border-top: 1px solid #CDD7D6;
+    border-bottom: 1px solid #CDD7D6; }
+
+.section-about {
+  background-color: #CDD7D6;
+  padding: 20rem 0;
+  color: #696969; }
+
+.section-technologies {
+  background-color: #102542;
+  padding: 20rem 0;
+  transform: skewY(-10deg); }
+  .section-technologies > * {
+    transform: skewY(10deg); }
+
+.section-projects {
+  background-color: #CDD7D6;
+  padding: 20rem 0; }
