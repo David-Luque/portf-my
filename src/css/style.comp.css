@@ -154,17 +154,60 @@ body {
     transform: translate(-50%, -50%); }
 
 .section-about {
+  width: 100%;
   background-color: #CDD7D6;
   padding: 20rem 0;
   color: #696969; }
+  .section-about__content {
+    width: 90%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; }
+  .section-about__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start; }
 
 .section-technologies {
   background-color: #102542;
   padding: 20rem 0;
-  transform: skewY(-10deg); }
+  transform: skewY(-10deg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
   .section-technologies > * {
     transform: skewY(10deg); }
+  .section-technologies__content {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3px; }
+  .section-technologies__block {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.15); }
 
 .section-projects {
   background-color: #CDD7D6;
-  padding: 20rem 0; }
+  padding: 20rem 0;
+  width: 100%;
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch; }
+  .section-projects__content {
+    list-style: none; }
+  .section-projects__project-card {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin: .6rem;
+    border-radius: 5px; }

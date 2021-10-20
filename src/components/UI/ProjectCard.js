@@ -13,12 +13,12 @@ const ProjectCard = ({ projectInfo })=>{
             <Button
                 link={publicURL}
                 text="Preview"
-                className="button--url"
+                classToHTML="button--url"
             />
             <Button
                 link={gitHub_link}
                 text="GitHub Repo"
-                className="button--github"
+                classToHTML="button--github"
             />
         </li>
     )
