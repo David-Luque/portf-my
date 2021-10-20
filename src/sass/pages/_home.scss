@@ -42,22 +42,82 @@
 }
 
 .section-about {
+    width: 100%;
     background-color: $color-tertiary;
     padding: 20rem 0;
     color: $font-color-grey;
+
+    
+    &__content {
+        width: 90%;
+        height: 80%;
+        background-color: rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    &__text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
 
 .section-technologies {
     background-color: $color-primary;
     padding: 20rem 0;
     transform: skewY(-10deg);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
     & > * {
         transform: skewY(10deg);
+    }
+
+    &__content{
+        width: 100%;
+        list-style: none;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3px;
+    }
+
+    &__block {
+        padding: 2rem;
+        background-color: rgba(0,0,0,.15);
     }
 }
 
 .section-projects {
     background-color: $color-tertiary;
     padding: 20rem 0;
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+
+    &__content {
+        list-style: none;
+    }
+
+    &__project-card {
+        background-color: rgba(0,0,0,.15);
+        padding: 2rem;
+        margin: .6rem;
+        border-radius: 5px;
+    }
 }

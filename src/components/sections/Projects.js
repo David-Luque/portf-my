@@ -1,31 +1,7 @@
 import * as React from 'react';
-import styled from '@emotion/styled';
 import ProjectCard from '../UI/ProjectCard';
 import projectsData from '../../projectsData';
 
-const ProjectStyled = styled.section`
-    width: 100%;
-    height: auto;
-    background-color: #4F7942;
-    color: whitesmoke;
-    text-align: center;
-
-    ul {
-        list-style: none;
-
-        li {
-            background-color: rgba(0,0,0,.15);
-            padding: 2rem;
-            margin: .6rem;
-            border-radius: 5px;
-        }
-    }
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-`;
 
 const renderProjects = ()=>{
     return projectsData.map((project, index) => (
@@ -38,12 +14,12 @@ const renderProjects = ()=>{
 
 const Projects = () => {
     return (
-        <ProjectStyled id="projects" className="section-projects">
-            <h2>My projects</h2>
-            <ul>
+        <section id="projects" className="section-projects">
+            <h2 className="heading-secondary">My projects</h2>
+            <ul className="section-projects__content">
                 {renderProjects()}
             </ul>
-        </ProjectStyled>
+        </section>
     );
 };
  

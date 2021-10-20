@@ -74,19 +74,6 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
 
-.header {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(16, 37, 66, 0.7), rgba(16, 37, 66, 0.9)), url("../images/bg-hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
 .navigation {
   position: fixed;
   top: 0;
@@ -113,18 +100,58 @@ body {
   background-color: #36454F;
   padding: 5rem 0;
   font-size: 1.2rem;
-  color: #696969; }
+  color: #696969;
+  width: 100%;
+  background-color: #36454F;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
   .footer:not(:last-child) {
     margin-bottom: 2rem; }
-  .footer__logo-box {
-    text-align: center; }
-  .footer__logo {
-    width: 5rem;
-    height: auto; }
   .footer__contact-info {
     padding: 4rem 0;
     border-top: 1px solid #CDD7D6;
     border-bottom: 1px solid #CDD7D6; }
+    .footer__contact-info > * {
+      margin: .5rem; }
+  .footer__copyright {
+    padding: 2.5rem;
+    margin: 0; }
+  .footer__email {
+    text-align: left; }
+  .footer__link img {
+    width: 2.5rem;
+    height: auto; }
+
+.header {
+  width: 100%;
+  height: 90vh;
+  background-color: chartreuse;
+  color: #696969;
+  background-image: linear-gradient(to bottom, rgba(16, 37, 66, 0.7), rgba(16, 37, 66, 0.9)), url("../images/bg-hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .header__line {
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    background-color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .section-about {
   background-color: #CDD7D6;
