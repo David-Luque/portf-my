@@ -25,9 +25,9 @@
     &__link {
         
         &:link,
-        &:link:visited {
+        &:visited {
             text-decoration: none;
-            color: whitesmoke;
+            color: $font-color-white;
             margin-right: 2rem;
             font-weight: 300;
             text-transform: uppercase;

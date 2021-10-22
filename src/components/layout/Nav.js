@@ -6,18 +6,21 @@ const Nav = ()=>{
     return (
         <nav className="navigation">
             <ul className="navigation__list">
+            <li>
                 <Link to={'#about'} className="navigation__link">
-                    <li>About me</li>
+                    About me
                 </Link>
+            </li>
+            <li>
                 <Link to={'#technologies'} className="navigation__link">
-                    <li>Technologies</li>
+                    Technologies
                 </Link>
+            </li>
+            <li>
                 <Link to={'#projects'} className="navigation__link">
-                    <li>Projects</li>
+                    Projects
                 </Link>
-                <Link to={'#contact'} className="navigation__link">
-                    <li>Contact</li>
-                </Link>
+            </li>
             </ul>
         </nav>
     );

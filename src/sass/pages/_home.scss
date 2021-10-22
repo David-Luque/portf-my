@@ -17,10 +17,10 @@
 
 
     &__text-box {
-        position: absolute;
+        position: relative;
         width: 55%;
-        top: 45%;
-        left: 50%;
+        top: 35%;
+        left: 30%;
         transform: translate(-50%, -50%);
         text-align: center;
         //padding-top: 7rem;
@@ -34,17 +34,18 @@
 
     &__line {
         position: absolute;
-        width: 25%;
-        height: 2px;
+        width: 500%;
+        height: 1px;
         background-color: whitesmoke;
-        top: 50%;
-        left:50%;
+        top: 63%;
+        left: 50%;
         transform: translate(-50%, -50%);
+        position: absolute;
     }
 
     &__arrows {
         position: absolute;
-        top: 100%;
+        top: 80%;
         left: 50%;
         font-size: 3rem;
         color: $font-color-grey;
@@ -62,15 +63,20 @@
 .section-about {
     width: 100%;
     background-color: $color-tertiary;
-    padding: 20rem 0;
+    padding: 35rem 0 60rem 0;
     color: $font-color-grey;
+    font-size: $default-font-size;
+    position: relative;
+    margin-bottom: -15rem;
 
     
     &__content {
         width: 90%;
-        height: 80%;
         background-color: rgba(0, 0, 0, 0.15);
         padding: 2rem;
+        position: absolute;
+        top: 25rem;
+        right: 0;
 
         display: flex;
         justify-content: space-around;
@@ -79,6 +85,7 @@
 
     &__text {
         width: 50%;
+        font-weight: 100;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -89,7 +96,7 @@
 .section-technologies {
     background-color: $color-primary;
     padding: 20rem 0;
-    transform: skewY(-10deg);
+    transform: skewY(-6deg);
     width: 100%;
 
     display: flex;
@@ -98,12 +105,13 @@
     align-items: center;
 
     & > * {
-        transform: skewY(10deg);
+        transform: skewY(6deg);
     }
 
     &__content{
         width: 100%;
         list-style: none;
+        margin-top: 8rem;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -111,14 +119,23 @@
     }
 
     &__block {
-        padding: 2rem;
+        padding: 5rem;
         background-color: rgba(0,0,0,.15);
+    }
+
+    &__tech {
+        font-size: 2rem;
+        font-style: italic;
+        background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary, .7), 
+            rgba($color-secondary, .5));
     }
 }
 
 .section-projects {
     background-color: $color-tertiary;
-    padding: 20rem 0;
+    padding: 40rem 0 5rem;
+    margin-top: -20rem;
     width: 100%;
     color: whitesmoke;
     text-align: center;

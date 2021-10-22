@@ -10,6 +10,7 @@ body {
     text-transform: uppercase;
 
     &--main {
+        display: block;
         font-size: 5rem;
         font-weight: 400;
         letter-spacing: 2rem;
@@ -22,8 +23,9 @@ body {
     }
 
     &--sub {
-        font-size: 3rem;
-        font-weight: 700;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 100;
         letter-spacing: 1.5rem;
         margin-top: 3rem;
 
@@ -42,11 +44,15 @@ body {
     // background-image
     // -webkit-background-clip
     color: $color-primary;
-    letter-spacing: .3rem;
+    letter-spacing: 2.5rem;
+
+    &--light {
+        color: $color-tertiary;
+    }
 }
 
 .heading-tertiary {
-    font-size: $default-font-size;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
 }
