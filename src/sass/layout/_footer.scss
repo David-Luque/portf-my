@@ -1,8 +1,8 @@
 .footer {
     background-color: $color-background-grey;
-    padding: 5rem 0;
+    padding: 3.5rem 0;
     font-size: 1.2rem;
-    color: $font-color-grey;
+    color: $color-tertiary;
     width: 100%;
     background-color: #36454F;
     text-align: center;
@@ -16,28 +16,44 @@
     }
 
     &__contact-info {
-        padding: 4rem 0;
-        border-top: 1px solid $color-tertiary;
-        border-bottom: 1px solid $color-tertiary;
-
+        width: 40%;
+        padding: 1rem 0;
+        border-top: 1px solid $font-color-grey;
+        border-bottom: 1px solid $font-color-grey;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        
         & > * {
             margin: .5rem;
         }
     }
 
     &__copyright {
+        width: 40%;
+        font-size: 2rem;
         padding: 2.5rem;
         margin: 0;
+        font-weight: 100;
     }
 
     &__email {
         text-align: left;
+        font-size: 2rem;
+        margin-left: 5rem;
+    }
+
+    &__social-media {
+        margin-left: 4rem;
     }
 
     &__link {
         img {
-            width: 2.5rem;
+            width: 3.5rem;
             height: auto;
+            margin: .5rem 1rem 0 2rem;
         }
     }
     

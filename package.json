@@ -20,7 +20,8 @@
     "concat:css": "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "restart": "npm-run-all build:css build start:css"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",

@@ -24,7 +24,7 @@ body {
       padding: 0; } }
 
 ::selection {
-  background-color: #F87060;
+  background-color: #FFA500;
   color: black; }
 
 body {
@@ -71,6 +71,8 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700; }
+  .heading-tertiary--light {
+    color: #CDD7D6; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -106,9 +108,9 @@ body {
 
 .footer {
   background-color: #36454F;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   font-size: 1.2rem;
-  color: #696969;
+  color: #CDD7D6;
   width: 100%;
   background-color: #36454F;
   text-align: center;
@@ -118,19 +120,32 @@ body {
   .footer:not(:last-child) {
     margin-bottom: 2rem; }
   .footer__contact-info {
-    padding: 4rem 0;
-    border-top: 1px solid #CDD7D6;
-    border-bottom: 1px solid #CDD7D6; }
+    width: 40%;
+    padding: 1rem 0;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
     .footer__contact-info > * {
       margin: .5rem; }
   .footer__copyright {
+    width: 40%;
+    font-size: 2rem;
     padding: 2.5rem;
-    margin: 0; }
+    margin: 0;
+    font-weight: 100; }
   .footer__email {
-    text-align: left; }
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 5rem; }
+  .footer__social-media {
+    margin-left: 4rem; }
   .footer__link img {
-    width: 2.5rem;
-    height: auto; }
+    width: 3.5rem;
+    height: auto;
+    margin: .5rem 1rem 0 2rem; }
 
 .header {
   width: 100%;
@@ -222,11 +237,12 @@ body {
     grid-gap: 3px; }
   .section-technologies__block {
     padding: 5rem;
-    background-color: rgba(0, 0, 0, 0.15); }
+    background-color: rgba(240, 248, 255, 0.15);
+    color: #102542; }
   .section-technologies__tech {
     font-size: 2rem;
     font-style: italic;
-    background-image: linear-gradient(to right bottom, rgba(248, 112, 96, 0.7), rgba(248, 112, 96, 0.5)); }
+    background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
 
 .section-projects {
   background-color: #CDD7D6;

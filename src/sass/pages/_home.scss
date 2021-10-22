@@ -120,7 +120,8 @@
 
     &__block {
         padding: 5rem;
-        background-color: rgba(0,0,0,.15);
+        background-color: rgba($color-background-white, .15);
+        color: $color-primary;
     }
 
     &__tech {
@@ -129,6 +130,12 @@
         background-image: linear-gradient(to right bottom, 
             rgba($color-secondary, .7), 
             rgba($color-secondary, .5));
+        // background-color: linear-gradient(to right bottom, 
+        // rgba($color-secondary, .7), 
+        // rgba($color-secondary, .5));
+        // background: linear-gradient(to right bottom, 
+        // rgba($color-secondary, .7), 
+        // rgba($color-secondary, .5));
     }
 }
 
