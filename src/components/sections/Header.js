@@ -11,13 +11,13 @@ const Header = () => {
                 </h1>
                 <div className="header__line"></div>
             </div>
-            <p className="header__arrows">
+            {/* <p className="header__arrows">
                 <span>&#62;</span>
                 <span>&#62;</span>
                 <span>&#62;</span>
                 <span>&#62;</span>
                 <span>&#62;</span>
-            </p>
+            </p> */}
         </header>
     );
 };

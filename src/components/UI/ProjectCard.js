@@ -3,7 +3,18 @@ import Button from './Button';
 
 const ProjectCard = ({ projectInfo })=>{
 
-    const { name, description, project_image, gitHub_link, publicURL } = projectInfo;
+    const { name, description, project_image, gitHub_links, publicURL } = projectInfo;
+
+    const renderLinkButtons = ()=>{
+        return gitHub_links.map(link => (
+            <Button
+                link={link}
+                text="GitHub repo"
+                className="button--github"
+            />
+        ))
+    };
+
 
     return (
         <li className="section-projects__project-card">
@@ -15,11 +26,7 @@ const ProjectCard = ({ projectInfo })=>{
                 text="Preview"
                 classToHTML="button--url"
             />
-            <Button
-                link={gitHub_link}
-                text="GitHub Repo"
-                classToHTML="button--github"
-            />
+            {renderLinkButtons()}
         </li>
     )
 };
