@@ -154,12 +154,39 @@
 
     &__content {
         list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
     }
 
     &__project-card {
         background-color: rgba(0,0,0,.15);
         padding: 2rem;
-        margin: .6rem;
+        margin: 0;
         border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    &__card-title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 1rem;
+    }
+
+    &__card-description {
+        font-size: $default-font-size;
+    }
+
+    &__card-buttons {
+        margin-top: 3rem;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 }

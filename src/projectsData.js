@@ -80,7 +80,7 @@ const projectsData = [
         description: "This website. Project developed on gatsby with SASS, and focused on starting my professional path in the software industry! :)",
         // project_image: "",
         gitHub_links: ["https://github.com/David-Luque/portf-my"],
-        publicURL: ""
+        publicURL: "javascript:void(0)"
     }
 ];
 

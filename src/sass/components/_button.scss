@@ -1,0 +1,55 @@
+.button {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        border-radius: 5px;
+        font-size: $default-font-size;
+        // border: none;
+        // cursor: pointer;
+        // display: inline-block;
+        // position: relative;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba(black, .3);
+        // transform: translateY(-3px);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    };
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(black, .5);
+    }
+
+
+    &--github {
+        background-color: $color-primary;
+        color: $font-color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
+    &--url {
+        background-color: $color-secondary;
+        color: $font-color-grey;
+
+        &::after {
+            background-color: $color-secondary
+        }
+    }
+
+
+
+}
