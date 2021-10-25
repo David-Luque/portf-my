@@ -27,7 +27,7 @@ const Technologies = () => {
                     <h3 className="heading-tertiary heading-tertiary--light">
                         Server frameworks
                     </h3>
-                    <p className="section-technologies__tech">Node.js & Express.js</p>
+                    <p className="section-technologies__tech">Express.js (Node.js)</p>
                     
                 </li>
                 <li className="section-technologies__block">
@@ -41,7 +41,9 @@ const Technologies = () => {
                     <h3 className="heading-tertiary heading-tertiary--light">
                         Testing
                     </h3>
-                    <p className="section-technologies__tech">Jest, Cypress, React-testing-library</p>
+                    <p className="section-technologies__tech">Jest</p>
+                    <p className="section-technologies__tech">Cypress</p>
+                    <p className="section-technologies__tech">React-testing-library</p>
                 </li>
                 <li className="section-technologies__block">
                     <h3 className="heading-tertiary heading-tertiary--light">
@@ -51,9 +53,11 @@ const Technologies = () => {
                 </li>
                 <li className="section-technologies__block">
                     <h3 className="heading-tertiary heading-tertiary--light">
-                        Content management systems
+                        CMS
                     </h3>
-                    <p className="section-technologies__tech">Firebase, DatoCMS, Strapi</p>
+                    <p className="section-technologies__tech">Firebase</p>
+                    <p className="section-technologies__tech">DatoCMS</p>
+                    <p className="section-technologies__tech">Strapi</p>
                 </li>
                 <li className="section-technologies__block">
                     <h3 className="heading-tertiary heading-tertiary--light">
