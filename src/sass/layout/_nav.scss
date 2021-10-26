@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 8rem;
     background-color: $color-primary;
     text-align: right;
@@ -12,6 +12,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    // @include responsive(phone) {
+    //     width: 100vw;
+    // }
 
 
     &__list {
@@ -32,6 +36,11 @@
             font-weight: 300;
             text-transform: uppercase;
             margin-right: 8rem;
+        
+            @include responsive(phone) {
+                margin-right: 4rem;
+            }
+        
         }
         
     }

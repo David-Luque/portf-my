@@ -17,7 +17,7 @@
 
 
     &__text-box {
-        position: relative;
+        position: absolute;
         width: 55%;
         top: 35%;
         left: 30%;
@@ -30,17 +30,29 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include responsive(tab-portrait) {
+            left: 50%;
+        }
     }
 
     &__line {
         position: absolute;
-        width: 500%;
+        width: 100vw;
         height: 1px;
         background-color: whitesmoke;
-        top: 63%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 38%;
+        left: 0;
+        //transform: translate(-50%, -50%);
         position: absolute;
+
+        @include responsive(tab-landscape) {
+            top: 37%;
+        }
+
+        @include responsive(phone) {
+            top: 34%;
+        }
     }
 
     &__arrows {
@@ -63,11 +75,11 @@
 .section-about {
     width: 100%;
     background-color: $color-tertiary;
-    padding: 35rem 0 60rem 0;
+    padding: 35rem 0 55rem 0;
     color: $font-color-grey;
     font-size: $default-font-size;
     position: relative;
-    margin-bottom: -15rem;
+    margin-bottom: -4rem;
 
     
     &__content {
@@ -81,6 +93,12 @@
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
+
+        @include responsive(phone) {
+            padding: 3rem 4rem 15rem;
+
+            justify-content: space-between;
+        }
     }
 
     &__text {
@@ -90,6 +108,10 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
+
+        @include responsive(phone) {
+            width: 80%;
+        }
     }
 }
 
@@ -104,6 +126,10 @@
     justify-content: space-around;
     align-items: center;
 
+    @include responsive(phone) {
+        padding: 15rem 0;
+    }
+
     & > * {
         transform: skewY(5deg);
     }
@@ -115,12 +141,19 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 2rem;
+
+        @include responsive(phone) {
+            margin: 4rem;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+        }
     }
 
     &__block {
         padding: 3rem;
         border-radius: 8px;
-        background-color: rgba($color-background-white, .15);
+        background-color: rgba($color-tertiary, .15);
         color: $color-primary;
     }
 
@@ -152,12 +185,23 @@
     justify-content: space-around;
     //align-items: stretch;
 
+    @include responsive(phone) {
+        padding: 30rem 0 5rem;
+    }
+
     &__content {
         list-style: none;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
         margin: 8rem 5rem 4rem;
+
+        @include responsive(phone) {
+            margin: 4rem;
+
+            grid-template-columns: 1fr;
+            grid-gap: 5rem;
+        }
     }
 
     &__project-card {
