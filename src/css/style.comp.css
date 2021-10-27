@@ -7,12 +7,12 @@
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 56.25em) {
-    html {
-      font-size: 56.25%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -219,11 +219,15 @@ body {
 .section-about {
   width: 100%;
   background-color: #CDD7D6;
-  padding: 35rem 0 55rem 0;
+  padding: 35rem 0 75rem 0;
   color: #696969;
   font-size: 1.8rem;
   position: relative;
-  margin-bottom: -4rem; }
+  margin-bottom: -10rem; }
+  @media only screen and (min-width: 112.5em) {
+    .section-about {
+      padding: 65rem 0 85rem;
+      margin-bottom: -8rem; } }
   .section-about__content {
     width: 90%;
     background-color: rgba(0, 0, 0, 0.15);
@@ -238,6 +242,10 @@ body {
       .section-about__content {
         padding: 3rem 4rem 15rem;
         justify-content: space-between; } }
+    @media only screen and (min-width: 112.5em) {
+      .section-about__content {
+        padding: 8rem 0;
+        top: 30%; } }
   .section-about__text {
     width: 50%;
     font-weight: 100;
@@ -251,7 +259,7 @@ body {
 
 .section-technologies {
   background-color: #102542;
-  padding: 12rem 0;
+  padding: 18rem 0;
   transform: skewY(-5deg);
   width: 100%;
   display: flex;
@@ -261,6 +269,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .section-technologies {
       padding: 15rem 0; } }
+  @media only screen and (min-width: 112.5em) {
+    .section-technologies {
+      padding: 20rem 0; } }
   .section-technologies > * {
     transform: skewY(5deg); }
   .section-technologies__content {
@@ -293,10 +304,14 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .section-projects {
       padding: 30rem 0 5rem; } }
+  @media only screen and (min-width: 112.5em) {
+    .section-projects {
+      padding: 60rem 0 20rem; } }
   .section-projects__content {
     list-style: none;
     display: grid;
@@ -308,23 +323,28 @@ body {
         margin: 4rem;
         grid-template-columns: 1fr;
         grid-gap: 5rem; } }
-  .section-projects__project-card {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 2rem;
-    margin: 0;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch; }
-  .section-projects__card-title {
+    @media only screen and (min-width: 112.5em) {
+      .section-projects__content {
+        width: 85%;
+        grid-gap: 3rem; } }
+
+.project-card {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch; }
+  .project-card__title {
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 1rem; }
-  .section-projects__card-description {
+  .project-card__description {
     font-size: 1.8rem; }
-  .section-projects__card-buttons {
+  .project-card__buttons {
     margin-top: 3rem;
     display: flex;
     justify-content: space-evenly;
@@ -333,7 +353,7 @@ body {
 .button, .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2.5rem;
   border-radius: 5px;
   font-size: 1.8rem; }
 

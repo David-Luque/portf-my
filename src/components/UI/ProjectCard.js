@@ -17,11 +17,11 @@ const ProjectCard = ({ projectInfo })=>{
 
 
     return (
-        <li className="section-projects__project-card">
-            <h5 className="section-projects__card-title">{name}</h5>
-            <p className="section-projects__card-description">{description}</p>
-            {/* <img className="section-projects__card-img" src={project_image} alt={`${name} preview`}/> */}
-            <div className="section-projects__card-buttons">
+        <li className="project-card">
+            <h5 className="project-card__title">{name}</h5>
+            <p className="project-card__description">{description}</p>
+            {/* <img className="project-card__img" src={project_image} alt={`${name} preview`}/> */}
+            <div className="project-card__buttons">
                 <Button
                     link={publicURL}
                     text="Preview"
