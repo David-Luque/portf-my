@@ -11,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @include responsive(phone) {
+    @include responsive(tab-portrait) {
         flex-direction: column;
     }
     
@@ -32,9 +32,11 @@
         
         & > * {
             margin: .5rem;
+
+            
         }
 
-        @include responsive(phone) {
+        @include responsive(tab-portrait) {
             width: 80%;
             border-bottom: hidden;
 
@@ -54,7 +56,7 @@
         margin: 0;
         font-weight: 100;
 
-        @include responsive(phone) {
+        @include responsive(tab-portrait) {
             width: 95%
         }
     }

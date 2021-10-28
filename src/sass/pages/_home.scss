@@ -32,7 +32,13 @@
         align-items: center;
 
         @include responsive(tab-portrait) {
+            width: 70%;
             left: 50%;
+        }
+
+        @include responsive(phone) {
+            width: 80%;
+            top: 30%;
         }
     }
 
@@ -51,7 +57,7 @@
         }
 
         @include responsive(phone) {
-            top: 34%;
+            top: 32.5%;
         }
     }
 
@@ -86,6 +92,11 @@
         margin-bottom: -8rem;
     }
 
+    @include responsive(phone) {
+        padding: 35rem 0 90rem;
+        margin-bottom: -14;
+    }
+
     
     &__content {
         width: 90%;
@@ -98,6 +109,10 @@
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
+
+        @include responsive(tab-landscape) {
+            padding: 8rem 2rem;
+        }
 
         @include responsive(phone) {
             padding: 3rem 4rem 15rem;
@@ -213,6 +228,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
         margin: 8rem 5rem 4rem;
+
+        @include responsive(tab-landscape) {
+            grid-gap: 2rem;
+        }
 
         @include responsive(phone) {
             margin: 4rem;
