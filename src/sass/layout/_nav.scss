@@ -33,6 +33,10 @@
             text-transform: uppercase;
             margin-right: 8rem;
         
+            @include responsive (tab-portrait) {
+                margin-right: 5rem;
+            }
+
             @include responsive(phone) {
                 margin-right: 4rem;
             }

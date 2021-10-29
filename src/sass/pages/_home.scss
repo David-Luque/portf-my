@@ -32,7 +32,7 @@
         align-items: center;
 
         @include responsive(tab-portrait) {
-            width: 70%;
+            width: 90%;
             left: 50%;
         }
 
@@ -54,6 +54,10 @@
 
         @include responsive(tab-landscape) {
             top: 37%;
+        }
+
+        @include responsive(tab-portrait) {
+            top: 38%;
         }
 
         @include responsive(phone) {
@@ -92,16 +96,21 @@
         margin-bottom: -8rem;
     }
 
+    @include responsive(tab-portrait) {
+        padding: 35rem 0 90rem;
+        margin-bottom: -16rem;
+    }
+
     @include responsive(phone) {
         padding: 35rem 0 90rem;
-        margin-bottom: -14;
+        margin-bottom: -14rem;
     }
 
     
     &__content {
         width: 90%;
         background-color: rgba(0, 0, 0, 0.15);
-        padding: 8rem 1rem;
+        padding: 8rem 5rem;
         position: absolute;
         top: 15rem;
         right: 0;
@@ -111,7 +120,11 @@
         align-items: flex-start;
 
         @include responsive(tab-landscape) {
-            padding: 8rem 2rem;
+            padding: 8rem 5rem;
+        }
+
+        @include responsive(tab-portrait) {
+            width: 100%;
         }
 
         @include responsive(phone) {
@@ -121,13 +134,13 @@
         }
 
         @include responsive(wide-desktop) {
-            padding: 8rem 0;
+            padding: 8rem;
             top: 30%;
         }
     }
 
     &__text {
-        width: 50%;
+        width: 80%;
         font-weight: 100;
         display: flex;
         flex-direction: column;
@@ -170,6 +183,12 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 2rem;
+
+        @include responsive(tab-portrait) {
+            width: 82%;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 6rem 4rem 4rem;
+        }
 
         @include responsive(phone) {
             margin: 4rem;
@@ -231,6 +250,11 @@
 
         @include responsive(tab-landscape) {
             grid-gap: 2rem;
+        }
+
+        @include responsive(tab-portrait) {
+            grid-template-columns: 1fr;
+            grid-gap: 4rem;
         }
 
         @include responsive(phone) {
