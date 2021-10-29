@@ -219,12 +219,9 @@ body {
     @media only screen and (max-width: 75em) {
       .header__line {
         top: 37%; } }
-    @media only screen and (max-width: 56.25em) {
-      .header__line {
-        top: 38%; } }
     @media only screen and (max-width: 37.5em) {
       .header__line {
-        top: 32.5%; } }
+        top: 31%; } }
   .header__arrows {
     position: absolute;
     top: 80%;
@@ -277,6 +274,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .section-about__content {
         padding: 3rem 4rem 15rem;
+        width: 90%;
         justify-content: space-between; } }
     @media only screen and (min-width: 112.5em) {
       .section-about__content {

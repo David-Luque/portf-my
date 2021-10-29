@@ -56,12 +56,12 @@
             top: 37%;
         }
 
-        @include responsive(tab-portrait) {
-            top: 38%;
-        }
+        // @include responsive(tab-portrait) {
+        //     top: 37%;
+        // }
 
         @include responsive(phone) {
-            top: 32.5%;
+            top: 31%;
         }
     }
 
@@ -129,6 +129,7 @@
 
         @include responsive(phone) {
             padding: 3rem 4rem 15rem;
+            width: 90%;
 
             justify-content: space-between;
         }
