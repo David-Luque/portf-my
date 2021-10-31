@@ -53,7 +53,7 @@
         position: absolute;
 
         @include responsive(tab-landscape) {
-            top: 37%;
+            top: 38%;
         }
 
         // @include responsive(tab-portrait) {
@@ -61,7 +61,7 @@
         // }
 
         @include responsive(phone) {
-            top: 31%;
+            top: 32%;
         }
     }
 
@@ -118,6 +118,14 @@
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
+
+        @media (prefers-reduced-motion: no-preference) {
+            &-animation {
+                animation-name: moveToLeft;
+                animation-duration: 1s;
+                animation-timing-function: ease-out;
+            }
+          }
 
         @include responsive(tab-landscape) {
             padding: 8rem 5rem;

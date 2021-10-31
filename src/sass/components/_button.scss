@@ -8,18 +8,16 @@
         padding: 1.5rem 2rem;
         border-radius: 5px;
         font-size: $default-font-size;
-        // border: none;
-        // cursor: pointer;
-        // display: inline-block;
-        // position: relative;
+        position: relative;
+        transition: all .3s;
     }
 
     &:hover {
         box-shadow: 0 1rem 2rem rgba(black, .3);
-        // transform: translateY(-3px);
+        transform: translateY(-3px);
 
         &::after {
-            transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.2) scaleY(1.4);
             opacity: 0;
         }
     };
@@ -50,6 +48,16 @@
         }
     }
 
-
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
 
 }

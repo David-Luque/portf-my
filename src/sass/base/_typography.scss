@@ -16,6 +16,11 @@ body {
         letter-spacing: 2rem;
         margin-bottom: 3rem;
 
+        animation-name: moveToBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+
         @include responsive(tab-portrait) {
             margin-bottom: 0;
         }
@@ -33,6 +38,10 @@ body {
         font-weight: 100;
         letter-spacing: 1.5rem;
         margin-top: 3rem;
+
+        animation-name: moveToTop;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
 
         @include responsive(tab-portrait) {
             margin-top: 0;

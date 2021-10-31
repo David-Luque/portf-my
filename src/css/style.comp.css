@@ -41,7 +41,10 @@ body {
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: 2rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    animation-name: moveToBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
     @media only screen and (max-width: 56.25em) {
       .heading-primary--main {
         margin-bottom: 0; } }
@@ -55,7 +58,10 @@ body {
     font-size: 1.5rem;
     font-weight: 100;
     letter-spacing: 1.5rem;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    animation-name: moveToTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
     @media only screen and (max-width: 56.25em) {
       .heading-primary--sub {
         margin-top: 0; } }
@@ -89,6 +95,30 @@ body {
   font-size: 1.8rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
+
+@keyframes moveToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(8rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 .navigation {
   position: fixed;
@@ -218,10 +248,10 @@ body {
     position: absolute; }
     @media only screen and (max-width: 75em) {
       .header__line {
-        top: 37%; } }
+        top: 38%; } }
     @media only screen and (max-width: 37.5em) {
       .header__line {
-        top: 31%; } }
+        top: 32%; } }
   .header__arrows {
     position: absolute;
     top: 80%;
@@ -265,6 +295,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-start; }
+    @media (prefers-reduced-motion: no-preference) {
+      .section-about__content-animation {
+        animation-name: moveToLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; } }
     @media only screen and (max-width: 75em) {
       .section-about__content {
         padding: 8rem 5rem; } }
@@ -401,12 +436,15 @@ body {
   text-decoration: none;
   padding: 1.5rem 2rem;
   border-radius: 5px;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  position: relative;
+  transition: all .3s; }
 
 .button:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px); }
   .button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1.2) scaleY(1.4);
     opacity: 0; }
 
 .button:active, .button:focus {
@@ -425,3 +463,14 @@ body {
   color: #696969; }
   .button--url::after {
     background-color: #FFA500; }
+
+.button::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }

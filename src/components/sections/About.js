@@ -1,7 +1,21 @@
 import * as React from 'react';
-
+import { useEffect } from 'react';
 
 const About = () => {
+
+    useEffect(()=>{
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const section = entry.target.querySelector('.section-about__content')
+                if(entry.isIntersecting) {
+                    section.classList.add('.section-about__content-animation')
+                }
+            })
+        });
+        observer.observe(document.querySelector('.section-about'))
+    }, []);
+
+
     return (
         <section id="about" className="section-about">
             <div className="section-about__content">
