@@ -15,6 +15,10 @@
     margin-top: 8rem;
     text-align: center;
 
+    @include responsive(phone-narrow) {
+        margin-top: 5rem;
+    }
+
 
     &__text-box {
         position: absolute;
@@ -40,6 +44,10 @@
             width: 80%;
             top: 30%;
         }
+
+        @include responsive(phone-narrow) {
+            width: 100%;
+        }
     }
 
     &__line {
@@ -63,23 +71,27 @@
         @include responsive(phone) {
             top: 32%;
         }
+
+        @include responsive(phone-narrow) {
+            top: 29%;
+        }
     }
 
-    &__arrows {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        font-size: 3rem;
-        color: $font-color-grey;
-        font-weight: 700;
-        transform: rotate(90deg);
+    // &__arrows {
+    //     position: absolute;
+    //     top: 80%;
+    //     left: 50%;
+    //     font-size: 3rem;
+    //     color: $font-color-grey;
+    //     font-weight: 700;
+    //     transform: rotate(90deg);
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
         
-    }
+    // }
 }
 
 .section-about {
@@ -104,6 +116,11 @@
     @include responsive(phone) {
         padding: 35rem 0 90rem;
         margin-bottom: -14rem;
+    }
+
+    @include responsive(phone-narrow) {
+        padding: 40rem 0 95rem;
+        margin-bottom: -8rem;
     }
 
     
@@ -141,9 +158,15 @@
 
         @include responsive(phone) {
             padding: 3rem 4rem 15rem;
-            width: 90%;
+            width: 100%;
 
             justify-content: space-between;
+        }
+
+        @include responsive(phone-narrow) {
+            padding: 6rem 3.5rem;
+            
+            flex-direction: column;
         }
 
         @include responsive(wide-desktop) {
@@ -161,7 +184,7 @@
         align-items: flex-start;
 
         @include responsive(phone) {
-            width: 80%;
+            width: 95%;
         }
     }
 }
