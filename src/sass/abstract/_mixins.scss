@@ -14,3 +14,16 @@
         @media only screen and (min-width: 112.5em) { @content }
     }
 }
+
+
+//transitions
+
+@mixin transitionToLeft {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@mixin transitionToBottom {
+    opacity: 1;
+    transform: translateY(0);
+}

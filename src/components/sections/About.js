@@ -1,24 +1,34 @@
 import * as React from 'react';
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 
 const About = () => {
 
+    const { ref, inView, entry } = useInView({
+        threshold: 0.5
+    });
+
     useEffect(()=>{
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const section = entry.target.querySelector('.section-about__content')
-                if(entry.isIntersecting) {
-                    section.classList.add('.section-about__content-animation')
-                }
-            })
-        });
-        observer.observe(document.querySelector('.section-about'))
-    }, []);
+        // const observer = new IntersectionObserver(entries => {
+        //     entries.forEach(entry => {
+        //         //const section = entry.target.querySelector('.section-about__content')
+        //         if(entry.isIntersecting) {
+        //             entry.target.classList.add('.section-about__content-animation')
+        //         }
+        //     })
+        // });
+        // observer.observe(document.querySelector('.section-about__content'))
+        
+        if(inView === true && entry.isIntersecting === true) {
+            entry.target.classList.add('section-about__content-animation')
+        }
+    }, [inView]);
 
 
     return (
         <section id="about" className="section-about">
-            <div className="section-about__content">
+            <div ref={ref} className="section-about__content">
                 <h2 className="heading-secondary">About me</h2>
                 <div className="section-about__text">
                     <p>

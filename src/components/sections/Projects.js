@@ -3,16 +3,18 @@ import ProjectCard from '../UI/ProjectCard';
 import projectsData from '../../projectsData';
 
 
-const renderProjects = ()=>{
-    return projectsData.map((project, index) => (
-        <ProjectCard
-            key={index}
-            projectInfo={project}
-        />
-    ))
-};
 
 const Projects = () => {
+    
+    const renderProjects = ()=>{
+        return projectsData.map((project, index) => (
+            <ProjectCard
+                key={index}
+                projectInfo={project}
+            />
+        ))
+    };
+
     return (
         <section id="projects" className="section-projects">
             <h2 className="heading-secondary">My projects</h2>

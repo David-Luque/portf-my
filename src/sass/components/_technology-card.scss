@@ -1,0 +1,28 @@
+.technology-card {
+    padding: 3rem;
+    border-radius: 8px;
+    background-color: rgba($color-tertiary, .15);
+    color: $color-primary;
+    opacity: 0;
+    transform: translateY(-4rem);
+    transition: all 1s;
+
+    &-animation {
+        @include transitionToBottom;
+    }
+
+
+    &__tech {
+        font-size: 2rem;
+        font-style: italic;
+        background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary, .7), 
+            rgba($color-secondary, .5));
+        // background-color: linear-gradient(to right bottom, 
+        // rgba($color-secondary, .7), 
+        // rgba($color-secondary, .5));
+        // background: linear-gradient(to right bottom, 
+        // rgba($color-secondary, .7), 
+        // rgba($color-secondary, .5));
+    }
+}

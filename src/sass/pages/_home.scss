@@ -114,6 +114,9 @@
         position: absolute;
         top: 15rem;
         right: 0;
+        transform: translateX(8rem);
+        opacity: 0;
+        transition: all 1s;
 
         display: flex;
         justify-content: space-around;
@@ -121,9 +124,10 @@
 
         @media (prefers-reduced-motion: no-preference) {
             &-animation {
-                animation-name: moveToLeft;
-                animation-duration: 1s;
-                animation-timing-function: ease-out;
+                @include transitionToLeft;
+                // animation-name: moveToLeft;
+                // animation-duration: 1s;
+                // animation-timing-function: ease-out;
             }
           }
 
@@ -205,28 +209,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 3rem;
         }
-    }
-
-    &__block {
-        padding: 3rem;
-        border-radius: 8px;
-        background-color: rgba($color-tertiary, .15);
-        color: $color-primary;
-    }
-
-    &__tech {
-        font-size: 2rem;
-        font-style: italic;
-        background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary, .7), 
-            rgba($color-secondary, .5));
-        // background-color: linear-gradient(to right bottom, 
-        // rgba($color-secondary, .7), 
-        // rgba($color-secondary, .5));
-        // background: linear-gradient(to right bottom, 
-        // rgba($color-secondary, .7), 
-        // rgba($color-secondary, .5));
-    }
+    }    
 }
 
 .section-projects {

@@ -112,14 +112,6 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-@keyframes moveToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(8rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
 .navigation {
   position: fixed;
   top: 0;
@@ -292,14 +284,16 @@ body {
     position: absolute;
     top: 15rem;
     right: 0;
+    transform: translateX(8rem);
+    opacity: 0;
+    transition: all 1s;
     display: flex;
     justify-content: space-around;
     align-items: flex-start; }
     @media (prefers-reduced-motion: no-preference) {
       .section-about__content-animation {
-        animation-name: moveToLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-out; } }
+        opacity: 1;
+        transform: translateX(0); } }
     @media only screen and (max-width: 75em) {
       .section-about__content {
         padding: 8rem 5rem; } }
@@ -359,15 +353,6 @@ body {
         margin: 4rem;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3rem; } }
-  .section-technologies__block {
-    padding: 3rem;
-    border-radius: 8px;
-    background-color: rgba(205, 215, 214, 0.15);
-    color: #102542; }
-  .section-technologies__tech {
-    font-size: 2rem;
-    font-style: italic;
-    background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
 
 .section-projects {
   background-color: #CDD7D6;
@@ -414,10 +399,16 @@ body {
   padding: 4rem 2rem;
   margin: 0;
   border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: all 1s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch; }
+  .project-card-animation {
+    opacity: 1;
+    transform: translateY(0); }
   .project-card__title {
     font-size: 3rem;
     text-transform: uppercase;
@@ -430,6 +421,22 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
+
+.technology-card {
+  padding: 3rem;
+  border-radius: 8px;
+  background-color: rgba(205, 215, 214, 0.15);
+  color: #102542;
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: all 1s; }
+  .technology-card-animation {
+    opacity: 1;
+    transform: translateY(0); }
+  .technology-card__tech {
+    font-size: 2rem;
+    font-style: italic;
+    background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
 
 .button, .button:link, .button:visited {
   text-transform: uppercase;
