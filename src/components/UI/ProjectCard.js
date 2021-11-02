@@ -38,7 +38,7 @@ const ProjectCard = ({ projectInfo })=>{
             <div className="project-card__buttons">
                 <Button
                     link={publicURL}
-                    text="Preview"
+                    text="Demo"
                     classToHTML="button button--url"
                 />
                 {renderLinkButtons()}
