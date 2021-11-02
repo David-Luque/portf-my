@@ -28,6 +28,10 @@
         align-items: center;
         list-style: none;
 
+        @include responsive(phone) {
+            font-size: 1.9rem;
+        }
+
         @include responsive(phone-narrow) {
             width: 100%;
         }
