@@ -232,6 +232,10 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 3rem;
         }
+
+        @include responsive(phone-narrow) {
+            grid-template-columns: 1fr;
+        }
     }    
 }
 

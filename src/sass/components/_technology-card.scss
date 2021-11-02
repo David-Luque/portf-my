@@ -18,11 +18,10 @@
         background-image: linear-gradient(to right bottom, 
             rgba($color-secondary, .7), 
             rgba($color-secondary, .5));
-        // background-color: linear-gradient(to right bottom, 
-        // rgba($color-secondary, .7), 
-        // rgba($color-secondary, .5));
-        // background: linear-gradient(to right bottom, 
-        // rgba($color-secondary, .7), 
-        // rgba($color-secondary, .5));
+
+            
+        @include responsive(phone-narrow) {
+            text-align: center;
+        }
     }
 }

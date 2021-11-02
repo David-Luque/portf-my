@@ -22,6 +22,11 @@
         text-transform: uppercase;
         font-weight: 100;
         letter-spacing: 1rem;
+
+        @include responsive(phone-narrow) {
+            font-size: 2.6rem;
+            letter-spacing: .5rem;
+        }
     }
     
     &__description {
@@ -34,6 +39,16 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @include responsive(phone-narrow) {
+
+            & > * {
+                margin: 1rem 0;
+                width: 90%; 
+            }
+
+            flex-direction: column;
+        }
     }
 
 

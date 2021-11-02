@@ -182,7 +182,7 @@ body {
   align-items: center; }
   @media only screen and (max-width: 56.25em) {
     .footer {
-      flex-direction: column; } }
+      flex-direction: column-reverse; } }
   .footer:not(:last-child) {
     margin-bottom: 2rem; }
   .footer__contact-info {
@@ -199,11 +199,15 @@ body {
     @media only screen and (max-width: 56.25em) {
       .footer__contact-info {
         width: 80%;
-        border-bottom: hidden;
+        border-top: hidden;
         flex-direction: row;
         justify-content: space-evenly; }
         .footer__contact-info > * {
           margin-left: 0; } }
+    @media only screen and (max-width: 33.75em) {
+      .footer__contact-info {
+        flex-direction: column;
+        align-items: center; } }
   .footer__copyright {
     width: 45%;
     font-size: 2rem;
@@ -213,16 +217,37 @@ body {
     @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 95%; } }
+    @media only screen and (max-width: 33.75em) {
+      .footer__copyright {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 2rem; } }
   .footer__email {
     text-align: left;
     font-size: 2rem;
     margin-left: 5rem; }
+    @media only screen and (max-width: 33.75em) {
+      .footer__email {
+        text-align: center;
+        margin-left: 0; } }
   .footer__social-media {
     margin-left: 4rem; }
+    @media only screen and (max-width: 33.75em) {
+      .footer__social-media {
+        margin-left: 0; } }
   .footer__link img {
     width: 3.5rem;
     height: auto;
     margin: .5rem 1rem 0 2rem; }
+    @media only screen and (max-width: 33.75em) {
+      .footer__link img {
+        width: 4rem;
+        margin: .5rem 2rem; } }
+  @media only screen and (max-width: 33.75em) {
+    .footer__link img {
+      width: 4rem;
+      height: auto;
+      margin: .5rem 2rem; } }
 
 .header {
   width: 100%;
@@ -382,6 +407,9 @@ body {
         margin: 4rem;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3rem; } }
+    @media only screen and (max-width: 33.75em) {
+      .section-technologies__content {
+        grid-template-columns: 1fr; } }
 
 .section-projects {
   background-color: #CDD7D6;
@@ -443,6 +471,10 @@ body {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 1rem; }
+    @media only screen and (max-width: 33.75em) {
+      .project-card__title {
+        font-size: 2.6rem;
+        letter-spacing: .5rem; } }
   .project-card__description {
     font-size: 1.8rem; }
   .project-card__buttons {
@@ -450,6 +482,12 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
+    @media only screen and (max-width: 33.75em) {
+      .project-card__buttons {
+        flex-direction: column; }
+        .project-card__buttons > * {
+          margin: 1rem 0;
+          width: 90%; } }
 
 .technology-card {
   padding: 3rem;
@@ -466,6 +504,9 @@ body {
     font-size: 2rem;
     font-style: italic;
     background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
+    @media only screen and (max-width: 33.75em) {
+      .technology-card__tech {
+        text-align: center; } }
 
 .button, .button:link, .button:visited {
   text-transform: uppercase;
