@@ -19,14 +19,31 @@ const ProjectCard = ({ projectInfo })=>{
     const { name, description, project_image, gitHub_links, publicURL } = projectInfo;
 
     const renderLinkButtons = ()=>{
-        return gitHub_links.map((link, index)=> (
-            <Button
-                key={index}
-                link={link}
-                text="GitHub repo"
-                classToHTML=" button button--github"
-            />
-        ))
+        if(gitHub_links.length === 1) {
+            return (
+                <Button
+                    link={gitHub_links[0]}
+                    text="GitHub repo"
+                    classToHTML=" button button--github"
+                />
+            )
+        }
+        
+        return (
+            <>
+                <Button
+                    link={gitHub_links[0]}
+                    text="UI code"
+                    classToHTML=" button button--github"
+                />
+                <Button
+                    link={gitHub_links[1]}
+                    text="API code"
+                    classToHTML=" button button--github"
+                />
+            </>
+            
+        )
     };
 
 

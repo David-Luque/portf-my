@@ -6,6 +6,7 @@
     opacity: 0;
     transform: translateY(-4rem);
     transition: all 1s;
+    
 
     &-animation {
         @include transitionToBottom;
@@ -16,14 +17,9 @@
         font-size: 2rem;
         font-style: italic;
         text-align: center;
-        padding: 0 1.5rem;
+        //padding: 0 1.5rem;
         background-image: linear-gradient(to right bottom, 
             rgba($color-secondary, .7), 
             rgba($color-secondary, .5));
-
-
-        // @include responsive(phone-narrow) {
-        //     text-align: center;
-        // }
     }
 }

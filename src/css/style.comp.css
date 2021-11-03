@@ -126,6 +126,18 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #102542; } }
+
 .navigation {
   position: fixed;
   top: 0;
@@ -495,20 +507,22 @@ body {
           width: 90%; } }
 
 .technology-card {
-  padding: 3rem;
+  padding: 2.4rem;
   border-radius: 8px;
   background-color: rgba(205, 215, 214, 0.15);
   color: #102542;
   opacity: 0;
-  transform: translateY(-4rem);
-  transition: all 1s; }
+  overflow: hidden;
+  border-right: 3px solid #102542;
+  margin: 0 auto; }
   .technology-card-animation {
     opacity: 1;
-    transform: translateY(0); }
+    animation: typing 3.5s steps(40, end) 1s, blink-caret 0.75 step-end infinite; }
   .technology-card__tech {
     font-size: 2rem;
     font-style: italic;
     text-align: center;
+    padding: 0 1.5rem;
     background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
 
 .button, .button:link, .button:visited {
