@@ -1,6 +1,6 @@
 import * as React from 'react';
 import technologiesData from '../../technologiesData';
-import TechnologyCard from '../UI/TechnologyCard';
+import TechnologyCard_Eng from '../UI/TechnologyCard_Eng';
 // import { useEffect } from 'react';
 // import { useInView } from 'react-intersection-observer';
 // import { typeEffect } from '../../helpers';
@@ -21,7 +21,7 @@ const Technologies = () => {
 
     const renderTechCards = ()=>{
         return technologiesData.map((elem, index) => (
-            <TechnologyCard
+            <TechnologyCard_Eng
                 key={index}
                 title={elem.title}
                 technologies={elem.techs}
@@ -33,7 +33,7 @@ const Technologies = () => {
     return (
         <section id="technologies" className="section-technologies">
             <h2 className="heading-secondary heading-secondary--light">
-                Tecnologías
+                Technologies
             </h2>
             <ul className="section-technologies__content">
                 {renderTechCards()}

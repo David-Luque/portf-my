@@ -1,5 +1,5 @@
 export const typeEffect = (html_id, text, _speed)=>{
-    const i = 0;
+    let i = 0;
     const txt = text;
     const speed = _speed; //miliseconds
 

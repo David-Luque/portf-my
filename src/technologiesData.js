@@ -1,27 +1,51 @@
 const technologiesData = [
     {
-        title: "Basics",
+        title: {
+            esp: "Básicos",
+            eng: "Basics"
+        },
         techs: ['HTML', 'CSS/SASS/SCSS', 'Javascript']
     },{
-        title: "Frontend frameworks",
+        title: {
+            esp: "Frontend frameworks",
+            eng: "Frontend frameworks"
+        },
         techs: ['React', 'Next.js & Gatsby']
     },{
-        title: "Server frameworks",
+        title: {
+            esp: "Server frameworks",
+            eng: "Server frameworks"
+        },
         techs: ['Express.js (Node.js)']
     },{
-        title: "Databases",
+        title: {
+            esp: "Bases de datos",
+            eng: "Databases"
+        },
         techs: ['MongoDB', 'MySQL']
     },{
-        title: "Testing",
+        title: {
+            esp: "Testeo",
+            eng: "Testing"
+        },
         techs: ['Jest', 'Cypress', 'React-testing-library']
     },{
-        title: "Version control",
+        title: {
+            esp: "Control de versiones",
+            eng: "Version control"
+        },
         techs: ['Git', 'GitHub']
     },{
-        title: "CMS",
+        title: {
+            esp: "CMS",
+            eng: "CMS"
+        },
         techs: ['Firebase', 'DatoCMS', 'Strapi']
     },{
-        title: "Other tools",
+        title: {
+            esp: "Otras herramientas",
+            eng: "Other tools"
+        },
         techs: ['Redux', 'REST APIs & GraphQL', 'Styled components']
     }
 ]

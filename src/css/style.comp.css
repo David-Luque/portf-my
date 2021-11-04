@@ -82,6 +82,8 @@ body {
         margin-bottom: 3rem; } }
 
 .heading-secondary {
+  width: 100%;
+  text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -128,15 +130,13 @@ body {
 
 @keyframes typing {
   from {
-    width: 0; }
-  to {
-    width: 100%; } }
+    width: 0; } }
 
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent; }
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; }
   50% {
-    border-color: #102542; } }
+    opacity: 0; } }
 
 .navigation {
   position: fixed;
@@ -149,12 +149,21 @@ body {
   font-size: 2rem;
   z-index: 2;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center; }
   @media only screen and (max-width: 33.75em) {
     .navigation {
       height: 5rem;
       font-size: 1.5rem; } }
+  .navigation__languages {
+    width: 10rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between; }
+  .navigation__flag {
+    width: 45%; }
+    .navigation__flag img {
+      width: 100%; }
   .navigation__list {
     width: 80%;
     display: flex;
@@ -512,12 +521,11 @@ body {
   background-color: rgba(205, 215, 214, 0.15);
   color: #102542;
   opacity: 0;
-  overflow: hidden;
-  border-right: 3px solid #102542;
-  margin: 0 auto; }
+  transform: translateY(-4rem);
+  transition: all 1s; }
   .technology-card-animation {
     opacity: 1;
-    animation: typing 3.5s steps(40, end) 1s, blink-caret 0.75 step-end infinite; }
+    transform: translateY(0); }
   .technology-card__tech {
     font-size: 2rem;
     font-style: italic;

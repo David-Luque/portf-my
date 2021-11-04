@@ -8,9 +8,10 @@
     text-align: right;
     font-size: 2rem;
     z-index: 2;
+    padding: 0 2rem;
     
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
     @include responsive(phone-narrow) {
@@ -18,6 +19,21 @@
         font-size: 1.5rem;
 
         
+    }
+
+    &__languages {
+        width: 10rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__flag {
+        width: 45%;
+
+        img {
+            width: 100%
+        }
     }
 
 

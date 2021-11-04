@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <h4 className="footer__copyright">Desarrollado por David Luque - Todos los derechos reservados &copy; - {year} </h4>
+            <h4 className="footer__copyright">Develop by David Luque - All rights reserved &copy; - {year} </h4>
             <div className="footer__contact-info">
                 <p className="footer__email">dvdlq99@gmail.com</p>
                 <div className="footer__social-media">

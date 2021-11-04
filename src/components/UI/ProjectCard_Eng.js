@@ -16,14 +16,14 @@ const ProjectCard = ({ projectInfo })=>{
         }
     }, [ inView ]);
 
-    const { name, description_esp, gitHub_links, publicURL } = projectInfo;
+    const { name, description_eng, gitHub_links, publicURL } = projectInfo;
 
     const renderLinkButtons = ()=>{
         if(gitHub_links.length === 1) {
             return (
                 <Button
                     link={gitHub_links[0]}
-                    text="Repo GitHub"
+                    text="GitHub repo"
                     classToHTML=" button button--github"
                 />
             )
@@ -33,12 +33,12 @@ const ProjectCard = ({ projectInfo })=>{
             <>
                 <Button
                     link={gitHub_links[0]}
-                    text="Codigo UI"
+                    text="UI code"
                     classToHTML=" button button--github"
                 />
                 <Button
                     link={gitHub_links[1]}
-                    text="Codigo API"
+                    text="API code"
                     classToHTML=" button button--github"
                 />
             </>
@@ -50,7 +50,7 @@ const ProjectCard = ({ projectInfo })=>{
     return (
         <li ref={ref} className="project-card">
             <h5 className="project-card__title">{name}</h5>
-            <p className="project-card__description">{description_esp}</p>
+            <p className="project-card__description">{description_eng}</p>
             {/* <img className="project-card__img" src={project_image} alt={`${name} preview`}/> */}
             <div className="project-card__buttons">
                 <Button

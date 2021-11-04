@@ -18,17 +18,17 @@ const Nav = ()=>{
             <ul className="navigation__list">
             <li>
                 <Link to={'#about'} className="navigation__link">
-                    Sobre mí
+                    About me
                 </Link>
             </li>
             <li>
                 <Link to={'#technologies'} className="navigation__link">
-                    Tecnologías
+                    Technologies
                 </Link>
             </li>
             <li>
                 <Link to={'#projects'} className="navigation__link">
-                    Proyectos
+                    Projects
                 </Link>
             </li>
             </ul>
