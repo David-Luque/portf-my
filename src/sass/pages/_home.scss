@@ -15,8 +15,8 @@
     margin-top: 8rem;
     text-align: center;
 
-    @include responsive(phone-narrow) {
-        margin-top: 5rem;
+    @include responsive(phone) {
+        margin-top: 0;
     }
 
 

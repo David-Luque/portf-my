@@ -152,17 +152,85 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media only screen and (max-width: 33.75em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation {
-      height: 5rem;
-      font-size: 1.5rem; } }
+      font-size: 1.5rem;
+      height: 50vh;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); } }
+  @media (min-width: 37.5em) {
+    .navigation__checkbox, .navigation__button {
+      display: none; } }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__checkbox:checked .navigation {
+    top: 0; }
+  .navigation__button {
+    background-color: #FFA500;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    z-index: 100; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 2.4rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #102542;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      top: .8rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    background-color: #F5F5F5;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    background-color: #F5F5F5;
+    transform: rotate(-135deg); }
+  .navigation__content {
+    width: 100%;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__content {
+        height: 95%;
+        flex-direction: column-reverse;
+        justify-content: space-around; } }
   .navigation__languages {
     width: 10rem;
     display: flex;
     align-items: stretch;
     justify-content: space-between; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__languages {
+        width: 14rem; } }
   .navigation__flag {
-    width: 45%; }
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; }
     .navigation__flag img {
       width: 100%; }
   .navigation__list {
@@ -173,10 +241,12 @@ body {
     list-style: none; }
     @media only screen and (max-width: 37.5em) {
       .navigation__list {
-        font-size: 1.9rem; } }
-    @media only screen and (max-width: 33.75em) {
-      .navigation__list {
-        width: 100%; } }
+        width: 100%;
+        font-size: 2rem;
+        flex-direction: column;
+        justify-content: space-between; }
+        .navigation__list > * {
+          margin: 2rem 0; } }
   .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
     color: #F5F5F5;
@@ -189,10 +259,7 @@ body {
         margin-right: 5rem; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__link:link, .navigation__link:visited {
-        margin-right: 4rem; } }
-    @media only screen and (max-width: 33.75em) {
-      .navigation__link:link, .navigation__link:visited {
-        margin-right: 2rem; } }
+        margin: 0; } }
 
 .footer {
   background-color: #36454F;
@@ -284,9 +351,9 @@ body {
   position: relative;
   margin-top: 8rem;
   text-align: center; }
-  @media only screen and (max-width: 33.75em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
-      margin-top: 5rem; } }
+      margin-top: 0; } }
   .header__text-box {
     position: absolute;
     width: 55%;
@@ -532,7 +599,7 @@ body {
     font-style: italic;
     text-align: center;
     padding: 0 1.5rem;
-    background-image: linear-gradient(to right bottom, rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.5)); }
+    background-image: linear-gradient(110deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0)); }
 
 .button, .button:link, .button:visited {
   text-transform: uppercase;

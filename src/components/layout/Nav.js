@@ -7,31 +7,38 @@ import englishFlag from '../../images/UK-USA-flag.png';
 const Nav = ()=>{
     return (
         <nav className="navigation">
-            <div className="navigation__languages">
-                <Link to={'/'} className="navigation__flag">
-                    <img src={spainFlag} alt="Spanish language" />
-                </Link>
-                <Link to={'/eng'} className="navigation__flag">
-                    <img src={englishFlag} alt="English language" />
-                </Link>
+            <input type="checkbox" className="navigation__checkbox" id="nav-toggle"/>
+            <label htmlFor="nav-toggle" className="navigation__button">
+                <span className="navigation__icon">&nbsp;</span>
+            </label>
+            <div className="navigation__content">
+                <div className="navigation__languages">
+                    <Link to={'/'} className="navigation__flag">
+                        <img src={spainFlag} alt="Spanish language" />
+                    </Link>
+                    <Link to={'/eng'} className="navigation__flag">
+                        <img src={englishFlag} alt="English language" />
+                    </Link>
+                </div>
+                <ul className="navigation__list">
+                    <li>
+                        <Link to={'#about'} className="navigation__link">
+                            Sobre mí
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'#technologies'} className="navigation__link">
+                            Tecnologías
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'#projects'} className="navigation__link">
+                            Proyectos
+                        </Link>
+                    </li>
+                </ul>
             </div>
-            <ul className="navigation__list">
-            <li>
-                <Link to={'#about'} className="navigation__link">
-                    Sobre mí
-                </Link>
-            </li>
-            <li>
-                <Link to={'#technologies'} className="navigation__link">
-                    Tecnologías
-                </Link>
-            </li>
-            <li>
-                <Link to={'#projects'} className="navigation__link">
-                    Proyectos
-                </Link>
-            </li>
-            </ul>
+            
         </nav>
     );
 };
