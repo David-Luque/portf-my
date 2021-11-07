@@ -577,7 +577,9 @@ body {
         grid-gap: 3rem; } }
 
 .project-card {
-  background-color: rgba(0, 0, 0, 0.15);
+  position: relative;
+  perspective: 150rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   padding: 4rem 2rem;
   margin: 0;
   border-radius: 5px;
@@ -590,6 +592,24 @@ body {
   align-items: stretch; }
   .project-card-animation {
     opacity: 1;
+    transform: translateY(0); }
+  .project-card__side {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all .8 ease; }
+    .project-card__side--front {
+      background-color: rgba(16, 37, 66, 0.5); }
+    .project-card__side--back {
+      background-color: rgba(0, 0, 0, 0.15);
+      transform: rotateY(180deg); }
+  .project-card:hover .project-card__side--front {
+    transform: translateY(-180deg); }
+  .project-card:hover .project-card__side--back {
     transform: translateY(0); }
   .project-card__title {
     font-size: 3rem;

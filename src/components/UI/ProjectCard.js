@@ -16,7 +16,7 @@ const ProjectCard = ({ projectInfo })=>{
         }
     }, [ inView ]);
 
-    const { name, description_esp, gitHub_links, publicURL } = projectInfo;
+    const { name, description_esp, project_image, gitHub_links, publicURL } = projectInfo;
 
     const renderLinkButtons = ()=>{
         if(gitHub_links.length === 1) {
@@ -49,18 +49,23 @@ const ProjectCard = ({ projectInfo })=>{
 
     return (
         <li ref={ref} className="project-card">
-            <h5 className="project-card__title">{name}</h5>
-            <p className="project-card__description">{description_esp}</p>
-            {/* <img className="project-card__img" src={project_image} alt={`${name} preview`}/> */}
-            <div className="project-card__buttons">
-                <Button
-                    link={publicURL}
-                    text="Demo"
-                    classToHTML="button button--url"
-                />
-                {renderLinkButtons()}
+            <div className="project-card__side project-card__side--front">
+                <h5 className="project-card__title">{name}</h5>
+                <p className="project-card__description">{description_esp}</p>
+                <button>+ info</button>
             </div>
-                
+            <div className="project-card__side project-card__side--back">
+                <img className="project-card__img" src={project_image} alt={`${name} preview`}/>
+                <div className="project-card__buttons">
+                    <Button
+                        link={publicURL}
+                        text="Demo"
+                        classToHTML="button button--url"
+                    />
+                    {renderLinkButtons()}
+                </div>
+                <button>back</button>
+            </div>
         </li>
     )
 };
