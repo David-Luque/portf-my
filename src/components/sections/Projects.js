@@ -7,13 +7,22 @@ import projectsData from '../../projectsData';
 const Projects = () => {
     
     const renderProjects = ()=>{
-        return projectsData.map((project, index) => (
-            <ProjectCard
-                key={index}
-                projectInfo={project}
-            />
-        ))
+
+        let count = 0;
+
+        return projectsData.map((project, index) => {
+            count ++;
+
+            return (
+                <ProjectCard
+                    key={index}
+                    projectInfo={project}
+                    cardNumber={count}
+                />
+            )
+        })
     };
+
 
     return (
         <section id="projects" className="section-projects">

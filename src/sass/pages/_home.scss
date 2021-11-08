@@ -42,7 +42,7 @@
 
         @include responsive(phone) {
             width: 80%;
-            top: 30%;
+            top: 45%;
         }
 
         @include responsive(phone-narrow) {
@@ -69,11 +69,11 @@
         // }
 
         @include responsive(phone) {
-            top: 33%;
+            top: 48%;
         }
 
         @include responsive(phone-narrow) {
-            top: 29%;
+            top: 44%;
         }
     }
 

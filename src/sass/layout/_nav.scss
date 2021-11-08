@@ -158,17 +158,17 @@
 
             & * {
                 height: 0;
-                opacity: 0;
+                display: none;
             }
         }
     }
     .content--displayed {
-        opacity: 1;
         height: 60vh;
-
+        opacity: 1;
+        
         * {
-            opacity: 1;
             height: auto;
+            display: inherit;
         }
     }
 

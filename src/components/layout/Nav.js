@@ -7,13 +7,10 @@ import englishFlag from '../../images/UK-USA-flag.png';
 const Nav = ()=>{
 
     const handleNav = ()=>{
-        
         const navBackground = document.querySelector('.navigation__background');
         const navContent = document.querySelector('.navigation__content');
         const navButton = document.querySelector('.navigation__button');
-
-        //console.log(navBackground.classList[navBackground.classList.length - 1])
-        // console.log(typeof navBackground.classList[0])
+        const navCheckbox = document.querySelector('.navigation__checkbox');
 
         const displayNavElements = ()=>{
             navBackground.classList.add('background--displayed');
@@ -22,6 +19,7 @@ const Nav = ()=>{
         };
     
         const hideNavElements = ()=>{
+            navCheckbox.checked = false;
             navBackground.classList.remove('background--displayed');
             navContent.classList.remove('content--displayed');
             navButton.classList.remove('button--displayed');
@@ -31,11 +29,7 @@ const Nav = ()=>{
             hideNavElements();
         } else {
             displayNavElements();
-        }
-
-        //console.log(navBackground.classList)
-        // console.log(navContent.classList)
-        // console.log(navButton.classList)
+        };
     };
 
     return (
