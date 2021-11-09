@@ -45,7 +45,7 @@
         }
 
         &--front {
-            background-color: rgba($color-primary, .8);
+            background-color: rgba($color-primary, .9);
             text-align: left;
 
             display: flex;
@@ -86,7 +86,7 @@
     }
 
     &__img {
-
+        width: 50%;
     }
     
     &__buttons {

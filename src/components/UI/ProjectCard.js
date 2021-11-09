@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button from './Button';
+import ImageViewer from './ImageViewer';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
@@ -60,7 +61,6 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
         })
     };
 
-
     return (
         <li ref={ref} className={`project-card ${cardNumber}`}>
             <div className="project-card__side project-card__side--front">
@@ -84,6 +84,7 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
                     &larr; Back
                 </button>
             </div>
+            <div className="image-viewer"></div>
         </li>
     )
 };
