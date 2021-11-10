@@ -578,6 +578,24 @@ body {
         width: 85%;
         grid-gap: 3rem; } }
 
+.technology-card {
+  padding: 2.4rem;
+  border-radius: 8px;
+  background-color: rgba(205, 215, 214, 0.15);
+  color: #102542;
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: all 1s; }
+  .technology-card-animation {
+    opacity: 1;
+    transform: translateY(0); }
+  .technology-card__tech {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    padding: 0 1.5rem;
+    background-image: linear-gradient(110deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0)); }
+
 .project-card {
   position: relative;
   perspective: 150rem;
@@ -633,7 +651,8 @@ body {
   .project-card__description {
     font-size: 1.8rem; }
   .project-card__img {
-    width: 50%; }
+    width: 50%;
+    cursor: pointer; }
   .project-card__buttons {
     margin-top: 3rem;
     display: flex;
@@ -668,24 +687,6 @@ body {
       .project-card__button-text-back:hover {
         color: #F5F5F5;
         background-color: #102542; }
-
-.technology-card {
-  padding: 2.4rem;
-  border-radius: 8px;
-  background-color: rgba(205, 215, 214, 0.15);
-  color: #102542;
-  opacity: 0;
-  transform: translateY(-4rem);
-  transition: all 1s; }
-  .technology-card-animation {
-    opacity: 1;
-    transform: translateY(0); }
-  .technology-card__tech {
-    font-size: 2rem;
-    font-style: italic;
-    text-align: center;
-    padding: 0 1.5rem;
-    background-image: linear-gradient(110deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.6), rgba(255, 165, 0, 0)); }
 
 .button, .button:link, .button:visited {
   text-transform: uppercase;
@@ -733,3 +734,53 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
+
+.image-viewer {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all .4s; }
+  @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    .image-viewer {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.4); } }
+  .image-viewer__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.25);
+    transform: scale(0.25);
+    transition: all .5s .2s; }
+    @media only screen and (max-width: 37.5em) {
+      .image-viewer__content {
+        width: 95%; } }
+  .image-viewer__close {
+    display: inline-block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 5rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #F5F5F5;
+    transition: all .2s;
+    line-height: 1; }
+    .image-viewer__close:hover {
+      color: #FFA500; }
+  .image-viewer__img {
+    display: block;
+    width: 100%; }

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Button from './Button';
-import ImageViewer from './ImageViewer';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
@@ -47,7 +46,6 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
         )
     };
 
-
     const handleTurnCard = (target)=>{
 
         const projectCards = document.querySelectorAll('.project-card');
@@ -61,8 +59,26 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
         })
     };
 
+    const expandPicture = ()=>{
+        const imgViewer = document.querySelector('.image-viewer');
+        const viewerImage = document.querySelector('.image-viewer__img');
+        const viewerContent = document.querySelector('.image-viewer__content');
+        const images = document.querySelectorAll('.project-card__img');
+        
+        images.forEach(image => {
+            image.addEventListener('click', function(){
+                viewerImage.src = `${image.src}`;
+                imgViewer.style.display = 'block';
+                imgViewer.style.opacity = '1';
+                viewerContent.style.opacity = '1';
+                viewerContent.style.transform = 'translate(-50%, -50%) scale(1)'
+            });
+        });
+    };
+
+
     return (
-        <li ref={ref} className={`project-card ${cardNumber}`}>
+        <li ref={ref} className={`project-card ${cardNumber}`} onLoad={() => expandPicture()}>
             <div className="project-card__side project-card__side--front">
                 <h5 className="project-card__title">{name}</h5>
                 <p className="project-card__description">{description_esp}</p>
@@ -84,7 +100,6 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
                     &larr; Back
                 </button>
             </div>
-            <div className="image-viewer"></div>
         </li>
     )
 };

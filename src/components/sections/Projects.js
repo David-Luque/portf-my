@@ -1,4 +1,5 @@
 import * as React from 'react';
+// import ImageViewer from '../UI/ImageViewer';
 import ProjectCard from '../UI/ProjectCard';
 import projectsData from '../../projectsData';
 
@@ -7,12 +8,9 @@ import projectsData from '../../projectsData';
 const Projects = () => {
     
     const renderProjects = ()=>{
-
         let count = 0;
-
         return projectsData.map((project, index) => {
             count ++;
-
             return (
                 <ProjectCard
                     key={index}
@@ -25,11 +23,12 @@ const Projects = () => {
 
 
     return (
-        <section id="projects" className="section-projects">
+        <section id="projects" className="section-projects" >
             <h2 className="heading-secondary">Proyectos</h2>
             <ul className="section-projects__content">
                 {renderProjects()}
             </ul>
+            {/* <ImageViewer/> */}
         </section>
     );
 };

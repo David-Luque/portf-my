@@ -1,11 +1,22 @@
 import * as React from 'react';
 
-const ImageViewer = ({ image, name })=>{
+const ImageViewer = ()=>{
+
+    const hidePreview = ()=>{
+        const imagePreviewDiv = document.querySelector('.image-viewer');
+        imagePreviewDiv.style.display = 'none';
+    };
+
     return (
-        <div className="image-viewer">
-            <span>X</span>
-            <img src={image} alt={`${name} preview`}/>
-        </div>
+        <aside id="image-viewer" className="image-viewer">
+            <span className="image-viewer__close" onClick={() => hidePreview()}>
+                &times;
+            </span>
+            <div className="image-viewer__content">
+                <img className="image-viewer__img" src="" alt="preview"/>
+            </div>
+            
+        </aside>
     )
 };
 
