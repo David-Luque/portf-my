@@ -80,8 +80,10 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
     return (
         <li ref={ref} className={`project-card ${cardNumber}`} onLoad={() => expandPicture()}>
             <div className="project-card__side project-card__side--front">
-                <h5 className="project-card__title">{name}</h5>
-                <p className="project-card__description">{description_esp}</p>
+                <div className="project-card__details">
+                    <h5 className="project-card__title margin-bottom-md">{name}</h5>
+                    <p className="project-card__description">{description_esp}</p>
+                </div>
                 <button className={`project-card__button-text ${cardNumber} project-card__button-text-front`} onClick={(e)=> handleTurnCard(e.target)}>
                     + Info &rarr;
                 </button>
