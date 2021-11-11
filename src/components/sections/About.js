@@ -29,7 +29,7 @@ const About = () => {
     return (
         <section id="about" className="section-about">
             <div ref={ref} className="section-about__content">
-                <h2 className="heading-secondary">Sobre mí</h2>
+                <h2 className="section-about__title heading-secondary">Sobre mí</h2>
                 <div className="section-about__text">
                     <p>
                         Tras pasar por la educación universitaria y no encontrar satisfacción en la metodología y conocimientos que se impartían, sentí la necesidad de aprender por mi cuenta. Desde entonces mi formación ha sido principalmente autodidacta.

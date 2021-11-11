@@ -82,7 +82,7 @@ body {
         margin-bottom: 3rem; } }
 
 .heading-secondary {
-  width: 100%;
+  width: min-content;
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
@@ -136,10 +136,8 @@ body {
     width: 0; } }
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 1; }
   50% {
-    opacity: 0; } }
+    border-color: transparent; } }
 
 .navigation {
   position: fixed;
@@ -490,6 +488,11 @@ body {
       .section-about__content {
         padding: 8rem;
         top: 30%; } }
+  .section-about__title {
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid; }
   .section-about__text {
     width: 80%;
     font-weight: 300;
@@ -521,6 +524,11 @@ body {
       padding: 20rem 0; } }
   .section-technologies > * {
     transform: skewY(5deg); }
+  .section-technologies__title {
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid; }
   .section-technologies__content {
     list-style: none;
     margin: 8rem 5rem 4rem;
@@ -558,6 +566,11 @@ body {
   @media only screen and (min-width: 112.5em) {
     .section-projects {
       padding: 60rem 0 20rem; } }
+  .section-projects__title {
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid; }
   .section-projects__content {
     list-style: none;
     display: grid;

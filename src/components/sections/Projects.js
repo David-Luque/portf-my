@@ -24,7 +24,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className="section-projects" >
-            <h2 className="heading-secondary">Proyectos</h2>
+            <h2 className="section-projects__title heading-secondary">Proyectos</h2>
             <ul className="section-projects__content">
                 {renderProjects()}
             </ul>

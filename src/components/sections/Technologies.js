@@ -32,7 +32,7 @@ const Technologies = () => {
 
     return (
         <section id="technologies" className="section-technologies">
-            <h2 className="heading-secondary heading-secondary--light">
+            <h2 className="section-technologies__title heading-secondary heading-secondary--light">
                 Tecnologías
             </h2>
             <ul className="section-technologies__content">

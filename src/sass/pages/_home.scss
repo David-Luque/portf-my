@@ -175,6 +175,10 @@
         }
     }
 
+    &__title {
+        @include typeTitle;
+    }
+
     &__text {
         width: 80%;
         font-weight: 300;
@@ -214,6 +218,10 @@
 
     & > * {
         transform: skewY(5deg);
+    }
+
+    &__title {
+        @include typeTitle;
     }
 
     &__content{
@@ -262,6 +270,10 @@
 
     @include responsive(wide-desktop) {
         padding: 60rem 0 20rem;
+    }
+
+    &__title {
+        @include typeTitle;
     }
 
     &__content {
