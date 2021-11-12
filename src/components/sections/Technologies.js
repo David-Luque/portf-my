@@ -1,22 +1,22 @@
 import * as React from 'react';
 import technologiesData from '../../technologiesData';
 import TechnologyCard from '../UI/TechnologyCard';
-// import { useEffect } from 'react';
-// import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 // import { typeEffect } from '../../helpers';
 
 
 const Technologies = () => {
 
-    // const { ref, inView, entry } = useInView({
-    //     threshold: 1
-    // });
+    const { ref, inView, entry } = useInView({
+        threshold: 1
+    });
 
-    // useEffect(()=>{
-    //     if(inView === true && entry.isIntersecting === true) {
-    //         typeEffect("section-technologies", 'Technologies', 2000);
-    //     }
-    // }, [ inView ]);
+    useEffect(()=>{
+        if(inView === true && entry.isIntersecting === true) {
+            entry.target.classList.add('section-technologies__title-animation');
+        }
+    }, [ inView ]);
 
 
     const renderTechCards = ()=>{
@@ -32,7 +32,7 @@ const Technologies = () => {
 
     return (
         <section id="technologies" className="section-technologies">
-            <h2 className="section-technologies__title heading-secondary heading-secondary--light">
+            <h2 ref={ref} className="section-technologies__title heading-secondary heading-secondary--light">
                 Tecnologías
             </h2>
             <ul className="section-technologies__content">

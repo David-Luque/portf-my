@@ -136,9 +136,10 @@
         transition: all 1s;
 
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
-
+        
         @media (prefers-reduced-motion: no-preference) {
             &-animation {
                 @include transitionToLeft;
@@ -165,8 +166,6 @@
 
         @include responsive(phone-narrow) {
             padding: 6rem 3.5rem;
-            
-            flex-direction: column;
         }
 
         @include responsive(wide-desktop) {
@@ -176,7 +175,19 @@
     }
 
     &__title {
-        @include typeTitle;
+        width: 35rem;
+        opacity: 1;
+
+        @include responsive(phone) {
+            width: 28rem;
+        }
+        @include responsive(phone-narrow) {
+            width: 21rem;
+        }
+
+        &-animation {
+            @include typeTitle;
+        }
     }
 
     &__text {
@@ -221,7 +232,19 @@
     }
 
     &__title {
-        @include typeTitle;
+        width: 49rem;
+        opacity: 0;
+        
+        @include responsive(phone) {
+            width: 39rem;
+        }
+        @include responsive(phone-narrow) {
+            width: 29rem;
+        }
+
+        &-animation {
+            @include typeTitle;
+        }
     }
 
     &__content{
@@ -273,7 +296,19 @@
     }
 
     &__title {
-        @include typeTitle;
+        width: 40rem;
+        opacity: 0;
+
+        @include responsive(phone-narrow) {
+            width: 32rem;
+        }
+        @include responsive(phone-narrow) {
+            width: 24rem;
+        }
+
+        &-animation {
+            @include typeTitle;
+        }
     }
 
     &__content {

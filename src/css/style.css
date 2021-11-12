@@ -463,6 +463,7 @@ body {
     opacity: 0;
     transition: all 1s;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start; }
     @media (prefers-reduced-motion: no-preference) {
@@ -482,17 +483,26 @@ body {
         justify-content: space-between; } }
     @media only screen and (max-width: 33.75em) {
       .section-about__content {
-        padding: 6rem 3.5rem;
-        flex-direction: column; } }
+        padding: 6rem 3.5rem; } }
     @media only screen and (min-width: 112.5em) {
       .section-about__content {
         padding: 8rem;
         top: 30%; } }
   .section-about__title {
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid; }
+    width: 35rem;
+    opacity: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .section-about__title {
+        width: 28rem; } }
+    @media only screen and (max-width: 33.75em) {
+      .section-about__title {
+        width: 21rem; } }
+    .section-about__title-animation {
+      opacity: 1;
+      animation: typing 1.5s steps(14), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid; }
   .section-about__text {
     width: 80%;
     font-weight: 300;
@@ -525,10 +535,20 @@ body {
   .section-technologies > * {
     transform: skewY(5deg); }
   .section-technologies__title {
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid; }
+    width: 49rem;
+    opacity: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .section-technologies__title {
+        width: 39rem; } }
+    @media only screen and (max-width: 33.75em) {
+      .section-technologies__title {
+        width: 29rem; } }
+    .section-technologies__title-animation {
+      opacity: 1;
+      animation: typing 1.5s steps(14), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid; }
   .section-technologies__content {
     list-style: none;
     margin: 8rem 5rem 4rem;
@@ -567,10 +587,20 @@ body {
     .section-projects {
       padding: 60rem 0 20rem; } }
   .section-projects__title {
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid; }
+    width: 40rem;
+    opacity: 0; }
+    @media only screen and (max-width: 33.75em) {
+      .section-projects__title {
+        width: 32rem; } }
+    @media only screen and (max-width: 33.75em) {
+      .section-projects__title {
+        width: 24rem; } }
+    .section-projects__title-animation {
+      opacity: 1;
+      animation: typing 1.5s steps(14), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid; }
   .section-projects__content {
     list-style: none;
     display: grid;
