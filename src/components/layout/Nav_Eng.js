@@ -2,42 +2,11 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import spainFlag from '../../images/spain_flag.png';
 import englishFlag from '../../images/UK-USA-flag.png';
+import { handleNav } from '../../helpers';
 
 
 const Nav = ()=>{
-
-    const handleNav = ()=>{
-        
-        const navBackground = document.querySelector('.navigation__background');
-        const navContent = document.querySelector('.navigation__content');
-        const navButton = document.querySelector('.navigation__button');
-
-        //console.log(navBackground.classList[navBackground.classList.length - 1])
-        // console.log(typeof navBackground.classList[0])
-
-        const displayNavElements = ()=>{
-            navBackground.classList.add('background--displayed');
-            navContent.classList.add('content--displayed');
-            navButton.classList.add('button--displayed');
-        };
     
-        const hideNavElements = ()=>{
-            navBackground.classList.remove('background--displayed');
-            navContent.classList.remove('content--displayed');
-            navButton.classList.remove('button--displayed');
-        };
-        
-        if(navBackground.classList[navBackground.classList.length - 1] === 'background--displayed') {
-            hideNavElements();
-        } else {
-            displayNavElements();
-        }
-
-        //console.log(navBackground.classList)
-        // console.log(navContent.classList)
-        // console.log(navButton.classList)
-    };
-
     return (
         <nav className="navigation">
             <input type="checkbox" className="navigation__checkbox" id="nav-toggle" onClick={handleNav}/>

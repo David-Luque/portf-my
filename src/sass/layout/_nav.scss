@@ -6,7 +6,7 @@
     height: 8rem;
     background-color: $color-primary;
     text-align: right;
-    font-size: 2rem;
+    font-size: 1.8rem;
     z-index: 2;
     padding: 0 2rem;
     
@@ -23,7 +23,7 @@
         
     }
 
-    @media(min-width: 37.5em) {
+    @media(min-width: 601px) {
         &__checkbox,
         &__button,
         &__background {
@@ -133,8 +133,6 @@
     }
 
 
-
-
     &__content {
         width: 100%;
         z-index: 50;
@@ -230,7 +228,7 @@
             margin-right: 8rem;
         
             @include responsive (tab-portrait) {
-                margin-right: 5rem;
+                margin-right: 3.5rem;
             }
 
             @include responsive(phone) {

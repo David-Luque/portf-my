@@ -31,12 +31,10 @@
     &__side {
         height: 100%;
         width: 100%;
-        //position: absolute;
         border-radius: 5px;
         box-shadow: 0 1.5rem 4rem rgba(black, .15);
         top: 0;
         left: 0;
-        //-webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         overflow: hidden;
         transition: all .8s ease;
@@ -119,13 +117,12 @@
         }
 
         @include responsive(phone-narrow) {
-
+            flex-direction: column;
+            
             & > * {
                 margin: .5rem 0;
                 width: 90%; 
             }
-
-            flex-direction: column;
         }
     }
 

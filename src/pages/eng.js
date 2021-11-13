@@ -4,19 +4,23 @@ import Header from '../components/sections/Header';
 import About_Eng from '../components/sections/About_Eng';
 import Technologies_Eng from '../components/sections/Technologies_Eng';
 import Projects_Eng from '../components/sections/Projects_Eng';
+import ImageViewer from '../components/UI/ImageViewer';
 import "../css/style.css";
 
 
 const IndexPage = () => {
   return (
-    <Layout_Eng>
-      <>
-        <Header />
-        <About_Eng />
-        <Technologies_Eng/>
-        <Projects_Eng/>
-      </>
-    </Layout_Eng>
+    <>
+      <Layout_Eng>
+        <>
+          <Header />
+          <About_Eng />
+          <Technologies_Eng/>
+          <Projects_Eng/>
+        </>
+      </Layout_Eng>
+      <ImageViewer/>
+    </>
   )
 }
 

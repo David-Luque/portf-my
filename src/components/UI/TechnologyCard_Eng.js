@@ -25,7 +25,7 @@ const TechnologyCard = ({ title, technologies })=>{
     return (
         <li ref={ref} className="technology-card">
             <h3 className="heading-tertiary heading-tertiary--light">
-                {title.eng}
+                {title}
             </h3>
             {renderParagraphs()}
         </li>

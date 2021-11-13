@@ -11,13 +11,6 @@ const Header = () => {
                 </h1>
             </div>
             <div className="header__line"></div>
-            {/* <p className="header__arrows">
-                <span>&#62;</span>
-                <span>&#62;</span>
-                <span>&#62;</span>
-                <span>&#62;</span>
-                <span>&#62;</span>
-            </p> */}
         </header>
     );
 };

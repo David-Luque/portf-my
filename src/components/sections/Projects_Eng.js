@@ -1,23 +1,42 @@
 import * as React from 'react';
-import ProjectCard_Eng from '../UI/ProjectCard_Eng';
+import ProjectCard from '../UI/ProjectCard_Eng';
 import projectsData from '../../projectsData';
-
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 
 const Projects = () => {
+
+    const { ref, inView, entry } = useInView({
+        threshold: 1
+    });
     
     const renderProjects = ()=>{
-        return projectsData.map((project, index) => (
-            <ProjectCard_Eng
-                key={index}
-                projectInfo={project}
-            />
-        ))
+        let count = 0;
+        return projectsData.map((project, index) => {
+            count ++;
+            return (
+                <ProjectCard
+                    key={index}
+                    projectInfo={project}
+                    cardNumber={count}
+                />
+            )
+        })
     };
 
+    useEffect(()=>{
+        if(inView === true && entry.isIntersecting === true) {
+            entry.target.classList.add('section-projects__title-animation');
+        }
+    }, [ inView ]);
+
+
     return (
-        <section id="projects" className="section-projects">
-            <h2 className="heading-secondary">Projects</h2>
+        <section id="projects" className="section-projects" >
+            <h2 ref={ref} className="section-projects__title section-projects__title--eng heading-secondary margin-bottom-md3">
+                Projects
+            </h2>
             <ul className="section-projects__content">
                 {renderProjects()}
             </ul>

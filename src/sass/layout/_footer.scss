@@ -1,6 +1,6 @@
 .footer {
     background-color: $color-background-grey;
-    padding: 3.5rem 0;
+    padding: 10rem 2rem;
     font-size: 1.2rem;
     color: $color-tertiary;
     width: 100%;
@@ -15,9 +15,9 @@
         flex-direction: column-reverse;
     }
     
-    &:not(:last-child) {
-        margin-bottom: 2rem;
-    }
+    // &:not(:last-child) {
+    //     margin-bottom: 2rem;
+    // }
 
     &__contact-info {
         width: 40%;

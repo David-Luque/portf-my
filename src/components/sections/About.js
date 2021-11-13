@@ -6,24 +6,14 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
 
     const { ref, inView, entry } = useInView({
-        threshold: 0.5
+        threshold: 0.2
     });
 
     const [ ref2, inView2, entry2 ] = useInView({
         threshold: 1
     });
 
-    useEffect(()=>{
-        // const observer = new IntersectionObserver(entries => {
-        //     entries.forEach(entry => {
-        //         //const section = entry.target.querySelector('.section-about__content')
-        //         if(entry.isIntersecting) {
-        //             entry.target.classList.add('.section-about__content-animation')
-        //         }
-        //     })
-        // });a
-        // observer.observe(document.querySelector('.section-about__content'))
-        
+    useEffect(()=>{        
         if(inView === true && entry.isIntersecting === true) {
             entry.target.classList.add('section-about__content-animation')
         }
@@ -37,7 +27,9 @@ const About = () => {
     return (
         <section id="about" className="section-about">
             <div ref={ref} className="section-about__content">
-                <h2 ref={ref2} className="section-about__title heading-secondary">Sobre mí</h2>
+                <h2 ref={ref2} className="section-about__title heading-secondary margin-bottom-md4">
+                    Sobre mí
+                </h2>
                 <div className="section-about__text">
                     <p>
                         Tras pasar por la educación universitaria y no encontrar satisfacción en la metodología y conocimientos que se impartían, sentí la necesidad de aprender por mi cuenta. Desde entonces mi formación ha sido principalmente autodidacta.
@@ -51,7 +43,6 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            
         </section>
     );
 }

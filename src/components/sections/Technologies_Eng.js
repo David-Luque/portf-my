@@ -1,29 +1,28 @@
 import * as React from 'react';
 import technologiesData from '../../technologiesData';
-import TechnologyCard_Eng from '../UI/TechnologyCard_Eng';
-// import { useEffect } from 'react';
-// import { useInView } from 'react-intersection-observer';
-// import { typeEffect } from '../../helpers';
+import TechnologyCard from '../UI/TechnologyCard';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 
 const Technologies = () => {
 
-    // const { ref, inView, entry } = useInView({
-    //     threshold: 1
-    // });
+    const { ref, inView, entry } = useInView({
+        threshold: 1
+    });
 
-    // useEffect(()=>{
-    //     if(inView === true && entry.isIntersecting === true) {
-    //         typeEffect("section-technologies", 'Technologies', 2000);
-    //     }
-    // }, [ inView ]);
+    useEffect(()=>{
+        if(inView === true && entry.isIntersecting === true) {
+            entry.target.classList.add('section-technologies__title-animation');
+        }
+    }, [ inView ]);
 
 
     const renderTechCards = ()=>{
         return technologiesData.map((elem, index) => (
-            <TechnologyCard_Eng
+            <TechnologyCard
                 key={index}
-                title={elem.title}
+                title={elem.title.eng}
                 technologies={elem.techs}
             />
         ));
@@ -32,7 +31,7 @@ const Technologies = () => {
 
     return (
         <section id="technologies" className="section-technologies">
-            <h2 className="heading-secondary heading-secondary--light">
+            <h2 ref={ref} className="section-technologies__title section-technologies__title--eng heading-secondary heading-secondary--light margin-bottom-md4">
                 Technologies
             </h2>
             <ul className="section-technologies__content">

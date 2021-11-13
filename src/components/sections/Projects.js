@@ -34,11 +34,12 @@ const Projects = () => {
 
     return (
         <section id="projects" className="section-projects" >
-            <h2 ref={ref} className="section-projects__title heading-secondary">Proyectos</h2>
+            <h2 ref={ref} className="section-projects__title heading-secondary margin-bottom-md3">
+                Proyectos
+            </h2>
             <ul className="section-projects__content">
                 {renderProjects()}
             </ul>
-            {/* <ImageViewer/> */}
         </section>
     );
 };
