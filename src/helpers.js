@@ -22,18 +22,18 @@ export const handleNav = ()=>{
     const navCheckbox = document.querySelector('.navigation__checkbox');
 
     const displayNavElements = ()=>{
-        navBackground.classList.add('background--displayed');
-        navContent.classList.add('content--displayed');
-        navButton.classList.add('button--displayed');
+        navBackground.classList.add('navigation__background--displayed');
+        navContent.classList.add('navigation__content--displayed');
+        navButton.classList.add('navigation__button--displayed');
     };
     const hideNavElements = ()=>{
         navCheckbox.checked = false;
-        navBackground.classList.remove('background--displayed');
-        navContent.classList.remove('content--displayed');
-        navButton.classList.remove('button--displayed');
+        navBackground.classList.remove('navigation__background--displayed');
+        navContent.classList.remove('navigation__content--displayed');
+        navButton.classList.remove('navigation__button--displayed');
     };
     
-    if(navBackground.classList[navBackground.classList.length - 1] === 'background--displayed') {
+    if(navBackground.classList[navBackground.classList.length - 1] === 'navigation__background--displayed') {
         hideNavElements();
     } else {
         displayNavElements();
