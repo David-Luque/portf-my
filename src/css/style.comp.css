@@ -348,14 +348,14 @@ body {
         width: 100%;
         font-size: 1.5rem;
         padding: 2rem; } }
-  .footer__email {
+  .footer__email, .footer__phone {
     text-decoration: none;
     color: #F5F5F5;
     text-align: left;
     font-size: 2rem;
     margin-left: 5rem; }
     @media only screen and (max-width: 33.75em) {
-      .footer__email {
+      .footer__email, .footer__phone {
         text-align: center;
         margin-left: 0; } }
   .footer__social-media {

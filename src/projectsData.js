@@ -20,7 +20,7 @@ const projectsData = [
             "https://github.com/David-Luque/MERN-task-app-Client",
             "https://github.com/David-Luque/MERN-task-app-Server" 
         ],
-        publicURL: "https://sleepy-franklin-3366bf.netlify.app/"
+        publicURL: "https://mern-task-app.netlify.app/"
     }, 
     {
         name: "Node Send",

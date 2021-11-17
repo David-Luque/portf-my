@@ -21,7 +21,7 @@
 
     &__contact-info {
         width: 40%;
-        padding: 1rem 0;
+        padding: 1rem 0 1rem 3rem;
         border-top: 1px solid $font-color-grey;
         border-bottom: 1px solid $font-color-grey;
         
@@ -31,28 +31,27 @@
         flex-direction: column;
         
         & > * {
-            margin: .5rem;
-
-            
+            margin: .5rem 0;
         }
 
         @include responsive(tab-portrait) {
             width: 80%;
             border-top: hidden;
+            padding: 2rem 0;
 
             & > * {
                 margin-left: 0;
             }
 
-            flex-direction: row;
             justify-content: space-evenly;
-        }
-
-        @include responsive(phone-narrow) {
-            
-            flex-direction: column;
             align-items: center;
         }
+
+        // @include responsive(phone-narrow) {
+            
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
     }
 
     &__copyright {
@@ -73,46 +72,60 @@
         }
     }
 
-    &__email {
+    &__email,
+    &__phone {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__email-img,
+    &__phone-img {
+        width: 3.5rem;
+        filter: invert(100%) sepia(4%) saturate(86%) hue-rotate(236deg) brightness(115%) contrast(92%);
+    }
+
+    &__email-direction,
+    &__phone-number {
         text-decoration: none;
         color: $font-color-white;
         text-align: left;
         font-size: 2rem;
-        margin-left: 5rem;
+        margin-left: 2rem;
 
         @include responsive(phone-narrow) {
             text-align: center;
-            margin-left: 0;
+            margin-left: 1rem;
         }
     }
 
     &__social-media {
-        margin-left: 4rem;
+        margin-left: 3rem;
 
-        @include responsive(phone-narrow) {
+        @include responsive(tab-portrait) {
             margin-left: 0;
         }
     }
 
     &__link {
+        &-resume {
+            filter: invert(100%) sepia(4%) saturate(86%) hue-rotate(236deg) brightness(115%) contrast(92%);
+        }
+
         img {
-            width: 3.5rem;
+            width: 4rem;
             height: auto;
             margin: .5rem 1rem 0 2rem;
 
             @include responsive(phone-narrow) {
-                width: 4rem;
                 margin: .5rem 2rem;
             }            
         }
 
-        @include responsive(phone-narrow) {
-            img {
-                width: 4rem;
-                height: auto;
-                margin: .5rem 2rem;
-            }
-        }
+        // @include responsive(phone-narrow) {
+        //     img {
+        //         margin: .5rem 2rem;
+        //     }
+        // }
     }
-    
 }

@@ -38,8 +38,11 @@ const About = () => {
                         Mi misión como desarrollador web es generar un gran impacto positivo y aportar el máximo valor con mi trabajo; crecer, profundizar y desarrollar mis conocimientos; trabajar y conocer múltiples herramientas y tecnologías; contribuir a un buen clima en el equipo de trabajo gracias a mi naturaleza conciliadora, y aportar mi perspectiva personal y única para afrontar desafíos.
                     </p>
                     <p>
-                        Mis principios son: honestidad, colaboración, ética, humildad y vocación de servicio.
+                        Los principios que me mueven son honestidad, colaboración, ética, humildad y vocación de servicio.
                         Soy una persona curiosa por naturaleza, me gusta no sólo entender la parte práctica sino también el porqué de las cosas.
+                    </p>
+                    <p>
+                        Mis principales hobbies son el el deporte y estidlo de vida daludable, la lectura, l
                     </p>
                 </div>
             </div>
