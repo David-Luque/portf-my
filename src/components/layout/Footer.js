@@ -4,7 +4,7 @@ import linkedInIcon from '../../images/LinkedIn_icon.jpg';
 import phoneImg from '../../images/phone.svg';
 import resumeImg from '../../images/resume.svg';
 import emailImg from '../../images/email.svg';
-import resumeFile from '../../../public/static/David-Luque-resume.pdf';
+import resumeFile from '../../../public/static/david-luque-resume-esp.pdf';
 
 
 const Footer = () => {
