@@ -14,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include responsive(tab-portrait) {
+        font-size: 1.6rem;
+    }
+
     @include responsive(phone) {
         text-align: center;
         padding: 0;
@@ -243,13 +247,12 @@
         &:visited {
             text-decoration: none;
             color: $font-color-white;
-            margin-right: 2rem;
             font-weight: 300;
             text-transform: uppercase;
             margin-right: 8rem;
         
             @include responsive (tab-portrait) {
-                margin-right: 3.5rem;
+                margin-right: 2rem;
             }
 
             @include responsive(phone) {

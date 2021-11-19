@@ -39,6 +39,11 @@ const Nav = ()=>{
                             Projects
                         </Link>
                     </li>
+                    <li>
+                        <Link to={'#contact-info'} className="navigation__link" onClick={handleNav}>
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
             </div>
             

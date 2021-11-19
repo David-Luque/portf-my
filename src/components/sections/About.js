@@ -41,9 +41,6 @@ const About = () => {
                         Los principios que me mueven son honestidad, colaboración, ética, humildad y vocación de servicio.
                         Soy una persona curiosa por naturaleza, me gusta no sólo entender la parte práctica sino también el porqué de las cosas.
                     </p>
-                    <p>
-                        Mis principales hobbies son el el deporte y estidlo de vida daludable, la lectura, l
-                    </p>
                 </div>
             </div>
         </section>
