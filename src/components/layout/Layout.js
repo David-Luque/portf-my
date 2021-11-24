@@ -10,7 +10,10 @@ const Layout = ({ children })=>{
         <>
             <Helmet>
                 <title>David Luque | Portfolio</title>
-                <meta name="description" content="David Luque | Porfolio personal"/>
+                <meta name="title" property="og:title" content="David Luque | Porfolio personal"/>
+                <meta name="description" property="og:description" content="Porfolio personal de David Luque"/>
+                <meta name="image" property="og:image" content="./static/portfolio-img-17266d63bda45a660d67ab37ce4265fa.png"/>
+
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="shortcut icon" type="image/png" href={iconImg}/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>

@@ -684,6 +684,12 @@ body {
     transform: rotateY(-180deg); }
   .project-card--turned .project-card__side--back {
     transform: rotateY(0); }
+  .project-card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
   .project-card__side {
     height: 100%;
     width: 100%;
@@ -731,7 +737,9 @@ body {
   .project-card__description {
     font-size: 1.8rem; }
   .project-card__img {
-    width: 90%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     cursor: pointer; }
   .project-card__buttons {
     margin-top: 3rem;

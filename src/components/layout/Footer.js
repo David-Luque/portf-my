@@ -21,7 +21,12 @@ const Footer = () => {
                         dvdlq99@gmail.com
                     </a>  
                 </div>
-                
+                <div className="footer__phone">
+                    <img src={phoneImg} alt="Phone" className="footer__phone-img"/>
+                    <a className="footer__phone-number" href="tel:+34622658132">
+                        (+34)&nbsp;622658132
+                    </a> 
+                </div>
                 <div className="footer__social-media">
                     <a className="footer__link" href="https://github.com/David-Luque" target="_blank">
                         <img src={gitHubIcon} alt="GitHub icon"/>
@@ -32,12 +37,6 @@ const Footer = () => {
                     <a className="footer__link" href={resumeFile} download>
                         <img className="footer__link-resume" src={resumeImg} alt="Resume"/>
                     </a>
-                </div>
-                <div className="footer__phone">
-                    <img src={phoneImg} alt="Phone" className="footer__phone-img"/>
-                    <a className="footer__phone-number" href="tel:+34622658132">
-                        (+34)&nbsp;622658132
-                    </a> 
                 </div>
             </div>
         </footer>

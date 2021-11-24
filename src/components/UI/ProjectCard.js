@@ -50,29 +50,31 @@ const ProjectCard = ({ projectInfo, cardNumber })=>{
 
     return (
         <li ref={ref} className={`project-card ${cardNumber}`} onLoad={() => expandPicture()}>
-            <div className="project-card__side project-card__side--front">
-                <div className="project-card__details">
-                    <h5 className="project-card__title margin-bottom-md3">{name}</h5>
+                
+                <div className="project-card__side project-card__side--front">
+                    <div className="project-card__details">
+                        <img className="project-card__img" src={project_image} alt={`${name} preview`}/>
+                        <h5 className="project-card__title margin-bottom-md3">{name}</h5>
+                    </div>
+                    <button className={`project-card__button-text ${cardNumber} project-card__button-text-front`} onClick={(e)=> handleTurnCard(e.target)}>
+                        + Info &rarr;
+                    </button>
+                </div>
+                <div className="project-card__side project-card__side--back">
                     <p className="project-card__description">{description_esp}</p>
-                </div>
-                <button className={`project-card__button-text ${cardNumber} project-card__button-text-front`} onClick={(e)=> handleTurnCard(e.target)}>
-                    + Info &rarr;
-                </button>
+                    <div className="project-card__buttons">
+                        <Button
+                            link={publicURL}
+                            text="Demo"
+                            classToHTML="button button--url"
+                        />
+                        {renderLinkButtons()}
+                    </div>
+                    <button className={`project-card__button-text ${cardNumber} project-card__button-text-back`} onClick={(e)=> handleTurnCard(e.target)}>
+                        &larr; Volver
+                    </button>
             </div>
-            <div className="project-card__side project-card__side--back">
-                <img className="project-card__img" src={project_image} alt={`${name} preview`}/>
-                <div className="project-card__buttons">
-                    <Button
-                        link={publicURL}
-                        text="Demo"
-                        classToHTML="button button--url"
-                    />
-                    {renderLinkButtons()}
-                </div>
-                <button className={`project-card__button-text ${cardNumber} project-card__button-text-back`} onClick={(e)=> handleTurnCard(e.target)}>
-                    &larr; Volver
-                </button>
-            </div>
+            
         </li>
     )
 };
