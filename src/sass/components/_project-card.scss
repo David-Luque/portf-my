@@ -18,9 +18,9 @@
         @include transitionToBottom;
     }
 
-    // @include responsive(phone) {
-    //     //height: 75vh;
-    // }
+    @include responsive(phone-narrow) {
+        line-height: 3rem;
+    }
 
     &--turned &__side--front {
         transform: rotateY(-180deg);
@@ -28,15 +28,6 @@
     &--turned &__side--back {
         transform: rotateY(0);
     }
-
-    // &__content {
-    //     width: 100%;
-    //     height: 100%;
-
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: flex-start;
-    // }
 
     &__side {
         height: 100%;
@@ -64,13 +55,13 @@
             justify-content: flex-start;
 
             @include responsive(phone-narrow) {
-                padding: 5rem 2rem;
+                padding: 2rem;
             }
         }
 
         &--back {
             position: absolute;
-            padding: 8rem;
+            padding: 4rem;
             background-color: rgba(0,0,0,.15);
             transform: rotateY(180deg);
 
@@ -78,6 +69,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @include responsive(tab-portrait) {
+                padding: 5.5rem;
+            }
+
+            @include responsive(phone) {
+                padding: 4rem;
+            }
 
             @include responsive(phone-narrow) {
                 padding: 0 2rem;
@@ -95,6 +94,7 @@
         @include responsive(phone-narrow) {
             font-size: 2.6rem;
             letter-spacing: .5rem;
+            margin-top: 3rem;
         }
     }
     
@@ -105,9 +105,6 @@
     }
 
     &__img {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -138,7 +135,7 @@
 
     &__button-text {
         position: absolute;
-        top: 80%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
@@ -148,6 +145,18 @@
         border: none;
         padding: 1rem;
         transition: all .3s;
+
+        // @include responsive(tab-portrait) {
+        //     top: 85%;
+        // }
+
+        @include responsive(phone) {
+            top: 80%;
+        }
+
+        @include responsive(wide-desktop) {
+            top: 80%;
+        }
 
         &:hover {
             transform: translate(-50%, -60%);

@@ -24,7 +24,7 @@ const projectsData = [
     }, 
     {
         name: "Node Send",
-        description_esp: "Aplicación web para compartir archivos directamente, controlando quién puede acceder y cuántas veces se puede descargar el archivo. Los archivos se eliminan después sin permanecer en la red. Desarrollado con NextJS, NodeJS, ExpressJS y MongoDB.",
+        description_esp: "Aplicación web para compartir archivos, controlando quién puede acceder y cuántas veces se puede descargar el archivo. Los archivos se eliminan después sin permanecer en la red. Desarrollado con NextJS, NodeJS, ExpressJS y MongoDB.",
         description_eng: "Web application for direct file sharing controlling who can access and how many times the file can be downloaded. The files are then deleted without remaining on the network. Developed with NextJS, NodeJS, ExpressJS and MongoDB.",
         project_image: nodeSendImage,
         gitHub_links: [

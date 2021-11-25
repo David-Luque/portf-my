@@ -358,6 +358,10 @@
             grid-gap: 5rem;
         }
 
+        @include responsive(phone-narrow) {
+            margin: 2rem 1rem;
+        }
+
         @include responsive(wide-desktop) {
             width: 85%;
             grid-gap: 3rem;
